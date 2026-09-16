@@ -1,0 +1,6 @@
+# materiał referencyjny z Pinteresta – nie publikujemy cudzych grafik
+referencja-AURA.jpg
+# lokalne kopie zdjęć ze znakami wodnymi
+img-oryginaly/
+.playwright-mcp/
+*.png

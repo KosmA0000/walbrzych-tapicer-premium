@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usługi tapicerskie — Marek Jagielski</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --taupe:#B3A895;        /* ciepłe tło zewnętrzne (jak w referencji) */
+  --taupe-d:#9C917E;
+  --cream:#F5F1EA;        /* płótno treści */
+  --cream-2:#EDE7DC;
+  --brown:#463C31;        /* ciemny brąz – nav, stopka */
+  --brown-d:#2F2820;
+  --ink:#2C2620;
+  --muted:#8A7E6E;
+  --line:rgba(44,38,32,.15);
+  --vw:100vw;             /* nadpisywane skryptem na clientWidth (bez paska przewijania) */
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--taupe);color:var(--ink);
+  font-family:var(--sans);font-weight:300;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,90vw);margin-inline:auto}
+.eyebrow{
+  font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--muted);font-weight:400;
+}
+
+/* ---------- NAV ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;padding:1.5rem 0;
+  transition:background .45s ease,padding .45s ease;
+}
+nav.solid{background:var(--brown);padding:.85rem 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.brand{
+  font-family:var(--serif);font-size:1.15rem;letter-spacing:.24em;
+  text-transform:uppercase;color:#F5F1EA;white-space:nowrap;
+}
+.nav-links{display:flex;gap:2.4rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.nav-links a{color:rgba(245,241,234,.82);position:relative;padding-bottom:4px}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:#F5F1EA;transition:width .4s cubic-bezier(.16,1,.3,1);
+}
+.nav-links a:hover::after{width:100%}
+.nav-tel{
+  font-size:.72rem;letter-spacing:.14em;color:#F5F1EA;
+  border:1px solid rgba(245,241,234,.4);padding:.55rem 1.2rem;border-radius:100px;
+  transition:all .4s ease;white-space:nowrap;
+}
+.nav-tel:hover{background:#F5F1EA;color:var(--brown)}
+
+/* hamburger – tylko mobile */
+.burger{
+  display:none;width:2.75rem;height:2.75rem;flex:0 0 auto;
+  background:transparent;border:1px solid rgba(245,241,234,.4);border-radius:50%;
+  cursor:pointer;padding:0;place-items:center;
+}
+.burger span{
+  display:block;width:16px;height:1px;background:#F5F1EA;margin:3.5px auto;
+  transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .3s ease;
+}
+/* odstęp między kreskami to 8px (1px wysokości + 2×3.5px marginesu) */
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+.menu{
+  position:fixed;inset:0;z-index:55;background:var(--brown);
+  display:grid;place-content:center;gap:1.6rem;text-align:center;
+  opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;
+}
+.menu.open{opacity:1;visibility:visible}
+.menu a{
+  color:#F5F1EA;font-family:var(--serif);font-size:2rem;letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.menu .m-contact{
+  font-family:var(--sans);font-size:1rem;letter-spacing:.1em;text-transform:none;
+  color:rgba(245,241,234,.82);
+}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:grid}
+  /* pełny numer nie mieści się obok marki – na mobile zastępuje go hamburger */
+  .nav-tel{display:none}
+  .brand{font-size:.95rem;letter-spacing:.18em}
+}
+@media(min-width:901px){.menu{display:none}}
+
+/* ---------- HERO (kadr bez przycinania) ---------- */
+header{position:relative;background:var(--taupe)}
+.hero-frame{
+  position:relative;height:100svh;min-height:520px;width:100%;
+  overflow:hidden;background:var(--brown-d);
+}
+/* hero wypełnia sekcję jak w referencji — jedyne kadrowane zdjęcie na stronie */
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.hero-frame::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(60% 42% at 50% 50%,rgba(30,24,18,.55) 0%,rgba(30,24,18,0) 100%),
+    linear-gradient(180deg,rgba(47,40,32,.5) 0%,rgba(47,40,32,.24) 40%,rgba(47,40,32,.66) 100%);
+}
+.hero-cap{
+  position:absolute;inset:0;z-index:2;display:grid;place-content:center;
+  text-align:center;color:#F7F4EE;padding:1rem;
+}
+.hero-cap h1{
+  font-family:var(--serif);font-weight:300;margin:0;
+  font-size:clamp(2.1rem,6.4vw,5.4rem);line-height:1.02;
+  letter-spacing:.06em;text-transform:uppercase;
+  text-shadow:0 2px 34px rgba(30,24,18,.5);
+}
+.hero-cap .sub{
+  margin-top:1.1rem;font-size:clamp(.62rem,1.3vw,.78rem);
+  letter-spacing:.42em;text-transform:uppercase;color:rgba(247,244,238,.92);
+}
+.hero-addr{
+  padding:1.7rem 0;text-align:center;font-size:.76rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--brown);
+}
+.hero-addr .sep{opacity:.5;padding:0 .5rem}
+/* adres prowadzi do map – zwykły odnośnik zewnętrzny, bez śledzenia po naszej stronie */
+.addr-link{border-bottom:1px solid transparent;transition:border-color .4s ease,opacity .4s ease}
+.addr-link:hover{border-bottom-color:currentColor}
+
+/* ---------- PŁÓTNO TREŚCI ---------- */
+.canvas{background:var(--cream)}
+section{padding:clamp(4rem,8vw,7.5rem) 0}
+
+/* blok "filozofii": tekst + zdjęcie */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.split h2{
+  font-family:var(--serif);font-weight:300;font-size:clamp(1.65rem,3.4vw,2.9rem);
+  line-height:1.24;margin:.9rem 0 1.6rem;letter-spacing:.01em;
+}
+.split .links{display:flex;flex-direction:column;gap:.75rem;font-size:.95rem}
+.split .links a{
+  display:inline-flex;align-items:center;gap:.7rem;width:fit-content;
+  border-bottom:1px solid var(--line);padding-bottom:.35rem;transition:all .4s ease;
+}
+.split .links a:hover{border-color:var(--ink);gap:1.1rem}
+.split .links a .ar{font-family:var(--serif);font-size:1.1rem}
+.frame{aspect-ratio:4/3;background:var(--cream-2);overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:contain}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+
+/* ---------- GALERIA: poziomy pas ---------- */
+.gal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2.4rem}
+.gal-head h2{
+  font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3.2rem);
+  margin:.6rem 0 0;line-height:1.1;
+}
+.gal-arrows{display:flex;gap:.6rem;flex:0 0 auto}
+.gal-arrows button{
+  width:3rem;height:3rem;border-radius:50%;border:1px solid var(--line);
+  background:transparent;color:var(--ink);font-family:var(--serif);font-size:1.5rem;
+  line-height:1;cursor:pointer;transition:all .4s ease;display:grid;place-items:center;
+}
+.gal-arrows button:hover:not(:disabled){background:var(--brown);color:var(--cream);border-color:var(--brown)}
+.gal-arrows button:disabled{opacity:.25;cursor:default}
+.gal{
+  display:flex;gap:1.2rem;overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x proximity;scroll-behavior:smooth;cursor:grab;
+  padding-bottom:1.6rem;scrollbar-width:none;-ms-overflow-style:none;
+  /* --vw = szerokość bez paska przewijania; 100vw powodowałoby poziomy scroll strony */
+  margin-inline:calc(50% - var(--vw)/2);padding-inline:calc(var(--vw)/2 - 50%);
+}
+.gal::-webkit-scrollbar{display:none}
+.gal.drag{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
+.gal figure{
+  margin:0;flex:0 0 auto;scroll-snap-align:start;
+  width:clamp(240px,30vw,400px);aspect-ratio:4/3;   /* zgodne z 4:3 zdjęć → zero kadrowania */
+  background:var(--cream-2);overflow:hidden;position:relative;cursor:zoom-in;
+}
+.gal figure img{width:100%;height:100%;object-fit:contain;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gal figure::after{content:"";position:absolute;inset:0;background:var(--brown);opacity:0;transition:opacity .5s ease}
+.gal figure:hover img{transform:scale(1.03)}
+.gal figure:hover::after{opacity:.07}
+.gal-line{height:1px;background:var(--line);position:relative;overflow:hidden;margin-top:.2rem}
+.gal-line i{position:absolute;left:0;top:0;height:100%;width:24%;background:var(--brown)}
+
+/* ---------- USŁUGI (wycentrowane, jak "The Process") ---------- */
+.mid{text-align:center;max-width:44rem;margin-inline:auto}
+.mid h2{
+  font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3.2rem);
+  margin:.7rem 0 0;line-height:1.14;
+}
+.svc{
+  margin-top:clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:0 clamp(2rem,5vw,4rem);
+}
+.svc-row{
+  display:grid;grid-template-columns:2.6rem 1fr;gap:1rem;align-items:baseline;
+  padding:1.15rem .2rem;border-bottom:1px solid var(--line);
+}
+.svc-n{font-size:.66rem;letter-spacing:.2em;color:var(--muted)}
+.svc-t{font-family:var(--serif);font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.3}
+.svc-sub{grid-column:2;font-size:.82rem;color:var(--muted);margin-top:.25rem}
+
+/* ---------- GODZINY ---------- */
+.hours{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);margin-top:clamp(2.5rem,5vw,4rem)}
+.hour-card{border-top:1px solid var(--line);padding-top:1.5rem;text-align:center}
+.hour-card .when{display:block;font-size:.74rem;letter-spacing:.14em;color:var(--muted);margin-bottom:.7rem}
+.hour-card .time{font-family:var(--serif);font-size:clamp(1.7rem,4.4vw,3rem);line-height:1;letter-spacing:.02em}
+@media(max-width:640px){.hours{grid-template-columns:1fr}}
+
+/* ---------- STOPKA ---------- */
+footer{background:var(--brown);color:#EFE9DE;padding:clamp(3.5rem,7vw,6rem) 0 2.5rem}
+.f-name{
+  font-family:var(--serif);font-weight:300;text-align:center;
+  font-size:clamp(1.8rem,5.5vw,4rem);letter-spacing:.1em;text-transform:uppercase;margin:0 0 3rem;
+}
+.f-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;
+  font-size:.92rem;text-align:center;color:rgba(239,233,222,.88);
+}
+.f-grid .lbl{
+  display:block;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(239,233,222,.5);margin-bottom:.8rem;
+}
+.f-grid a{transition:color .3s ease}
+.f-grid a:hover{color:#fff}
+.f-note{
+  margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(239,233,222,.18);
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(239,233,222,.45);text-align:center;
+}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr;gap:1.8rem}}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;background:rgba(31,26,20,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:88vh;object-fit:contain}
+.lb-close{position:absolute;top:1.5rem;right:2rem;color:#F5F1EA;font-family:var(--serif);font-size:2.4rem;line-height:1;cursor:pointer;opacity:.8}
+.lb-close:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#F5F1EA;font-family:var(--serif);font-size:2.8rem;cursor:pointer;opacity:.5;padding:1rem;user-select:none}
+.lb-nav:hover{opacity:1}
+.lb-prev{left:1vw}.lb-next{right:1vw}
+
+/* ---------- REVEAL (bazowy stan; GSAP przejmuje po wczytaniu) ---------- */
+.rv{opacity:0}
+.rv.in,.no-gsap .rv{opacity:1}
+.no-gsap .rv{transition:opacity .8s ease}
+
+/* split-text: pojedyncze znaki, jak u Hermera (transform+opacity+filter) */
+.sp-w{display:inline-block;white-space:nowrap}
+.sp-c{display:inline-block;opacity:0;will-change:transform,opacity,filter}
+.no-gsap .sp-c{opacity:1}
+
+/* marquee – pas z zakresem usług */
+.strip{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:1.15rem 0;overflow:hidden;background:var(--cream);
+}
+.strip-track{display:flex;width:max-content;will-change:transform}
+.strip-track span{
+  font-family:var(--serif);font-size:1.2rem;color:var(--ink);opacity:.72;
+  display:flex;align-items:center;gap:3rem;padding-right:3rem;white-space:nowrap;
+}
+.strip-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--taupe-d);display:block}
+
+/* karuzela 3D – odwzorowanie sceny 3D z hermer.pl */
+.gal figure{backface-visibility:hidden}
+
+@media(prefers-reduced-motion:reduce){
+  .rv,.sp-c{opacity:1!important;transform:none!important;filter:none!important}
+  .strip-track{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">Marek Jagielski</div>
+    <div class="nav-links">
+      <a href="#uslugi">Usługi</a>
+      <a href="#galeria">Galeria</a>
+    </div>
+    <a class="nav-tel" href="tel:+48697981075">+48 697 981 075</a>
+    <button class="burger" id="burger" aria-label="Usługi" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="#uslugi">Usługi</a>
+  <a href="#galeria">Galeria</a>
+  <a class="m-contact" href="tel:+48697981075">+48 697 981 075</a>
+  <a class="m-contact" href="tel:748401366">74 840 13 66</a>
+  <a class="m-contact" href="mailto:spierzak1@wp.pl">spierzak1@wp.pl</a>
+</div>
+
+<header>
+  <div class="hero-frame">
+    <img src="img/22.jpg" alt="Renowacja mebli antycznych" width="800" height="600">
+    <div class="hero-cap">
+      <h1 id="heroTitle">Usługi tapicerskie</h1>
+      <div class="sub" id="heroSub">Marek Jagielski</div>
+    </div>
+  </div>
+  <div class="hero-addr rv">
+    <a class="addr-link" href="https://www.google.com/maps/search/?api=1&amp;query=ul.%20Wroc%C5%82awska%2029%2C%2058-306%20Wa%C5%82brzych" target="_blank" rel="noopener noreferrer">ul. Wrocławska 29 <span class="sep">•</span> 58-306 Wałbrzych</a>
+  </div>
+</header>
+
+<div class="strip"><div class="strip-track" id="track"></div></div>
+
+<div class="canvas">
+
+  <section id="uslugi">
+    <div class="wrap">
+      <div class="mid">
+        <span class="eyebrow rv">Oferujemy państwu</span>
+        <h2 class="rv">zakres następujących usług:</h2>
+      </div>
+      <div class="svc" id="svcList"></div>
+
+      <div class="hours">
+        <div class="hour-card rv">
+          <span class="when">Zakład czynny od poniedziałku do piątku w godz.</span>
+          <div class="time">9:00 — 17:00</div>
+        </div>
+        <div class="hour-card rv">
+          <span class="when">w soboty w godz.</span>
+          <div class="time">9:00 — 13:00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow rv">Marek Jagielski</span>
+        <h2 class="rv">Jeśli mają państwo jakiekolwiek pytania bądź wątpliwości prosimy napisać lub zadzwonić.</h2>
+        <div class="links rv">
+          <a href="tel:+48697981075"><span class="ar">&#8594;</span> +48 697 981 075</a>
+          <a href="tel:748401366"><span class="ar">&#8594;</span> 74 840 13 66</a>
+          <a href="mailto:spierzak1@wp.pl"><span class="ar">&#8594;</span> spierzak1@wp.pl</a>
+        </div>
+      </div>
+      <div class="frame rv">
+        <img src="img/31.jpg" alt="Naprawianie konstrukcji foteli" loading="lazy" width="800" height="600">
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" style="padding-top:0">
+    <div class="wrap">
+      <div class="gal-head">
+        <div>
+          <span class="eyebrow rv">Galeria</span>
+          <h2 class="rv">wybranych prac:</h2>
+        </div>
+        <div class="gal-arrows rv">
+          <button id="galPrev" aria-label="&#8249;">&#8249;</button>
+          <button id="galNext" aria-label="&#8250;">&#8250;</button>
+        </div>
+      </div>
+    </div>
+    <div class="gal" id="gal"></div>
+    <div class="wrap"><div class="gal-line"><i id="galProg"></i></div></div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="f-name rv">Usługi tapicerskie</p>
+    <div class="f-grid">
+      <div class="rv">
+        <span class="lbl">Marek Jagielski</span>
+        <a class="addr-link" href="https://www.google.com/maps/search/?api=1&amp;query=ul.%20Wroc%C5%82awska%2029%2C%2058-306%20Wa%C5%82brzych" target="_blank" rel="noopener noreferrer">ul. Wrocławska 29<br>58-306 Wałbrzych</a>
+      </div>
+      <div class="rv">
+        <span class="lbl">Na przeciwko</span>
+        BLACK RED WHITE
+      </div>
+      <div class="rv">
+        <span class="lbl">kom.</span>
+        <a href="tel:748401366">tel:74 840 13 66</a><br>
+        <a href="tel:+48697981075">kom. 697 981 075</a><br>
+        <a href="mailto:spierzak1@wp.pl">spierzak1@wp.pl</a>
+      </div>
+    </div>
+    <div class="f-note">Usługi tapicerskie — Marek Jagielski — Wałbrzych</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb">
+  <span class="lb-close" id="lbClose">&times;</span>
+  <span class="lb-nav lb-prev" id="lbPrev">&#8249;</span>
+  <img id="lbImg" src="" alt="">
+  <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ===== treść: wyłącznie z oryginalnej strony ===== */
+const uslugi = [
+  ["Renowacja i naprawa mebli tapicerowanych","wersalki, fotele, sofy, krzesła, itp."],
+  ["Renowacja mebli antycznych",""],
+  ["Szycie nowych i naprawa starych dachów w cabrioletach",""],
+  ["Obszywanie deski rozdzielczej w skórę",""],
+  ["Wykonanie samochodowych sufitów i wykładzin podłogowych",""],
+  ["Tapicerujemy wnętrza jachtów i żaglówek",""],
+  ["Naprawianie konstrukcji foteli",""],
+  ["Wyszywanie loga i napisów",""],
+  ["Obszywanie kierownic, pokrowców dźwigni zmiany biegów",""],
+  ["Wnętrza w samochodach po tuningu",""],
+  ["Tapicerka drzwi",""]
+];
+const svc=document.getElementById('svcList');
+uslugi.forEach((u,i)=>{
+  const r=document.createElement('div');
+  r.className='svc-row rv';
+  r.innerHTML='<span class="svc-n">'+String(i+1).padStart(2,'0')+'</span>'+
+              '<span class="svc-t">'+u[0]+'</span>'+
+              (u[1]?'<span class="svc-sub">'+u[1]+'</span>':'');
+  svc.appendChild(r);
+});
+
+const files=["4","5","6","11","13","16","18","19","20","21","22","24","25","26a","28","31","32","33","34","35","37","38","39","41","51","53","56"];
+const galEl=document.getElementById('gal');
+let moved=0;
+files.forEach((f,idx)=>{
+  const fig=document.createElement('figure');
+  fig.className='rv';
+  fig.innerHTML='<img src="img/'+f+'.jpg" alt="Galeria wybranych prac" loading="lazy" width="800" height="600">';
+  fig.addEventListener('click',()=>{ if(moved>4)return; openLb(idx); });
+  galEl.appendChild(fig);
+});
+
+/* ===== poziomy pas: strzałki, pasek, przeciąganie ===== */
+const prog=document.getElementById('galProg'),
+      bPrev=document.getElementById('galPrev'),
+      bNext=document.getElementById('galNext');
+/* przesuwanie po indeksach kafelków – pewniejsze niż scrollBy o wyliczoną szerokość,
+   bo snap nie dociąga wtedy do kolejnego zdjęcia */
+function galIndex(){
+  const figs=[...galEl.querySelectorAll('figure')];
+  const pad=figs.length?figs[0].offsetLeft:0;
+  const x=galEl.scrollLeft;
+  let best=0,bd=Infinity;
+  figs.forEach((f,i)=>{const d=Math.abs((f.offsetLeft-pad)-x);if(d<bd){bd=d;best=i}});
+  return {figs,pad,i:best};
+}
+function galGo(delta){
+  const {figs,pad,i}=galIndex();
+  const t=Math.max(0,Math.min(figs.length-1,i+delta));
+  galEl.scrollTo({left:figs[t].offsetLeft-pad,behavior:'smooth'});
+}
+function galSync(){
+  const max=galEl.scrollWidth-galEl.clientWidth;
+  const r=max>0?galEl.scrollLeft/max:0;
+  prog.style.transform='translateX('+(r*(100/0.24-100))+'%)';
+  bPrev.disabled=galEl.scrollLeft<4;
+  bNext.disabled=galEl.scrollLeft>=max-4;
+}
+/* strzałki przesuwają pas dokładnie o jeden kafelek */
+bPrev.onclick=()=>galGo(-1);
+bNext.onclick=()=>galGo(1);
+galEl.addEventListener('scroll',galSync,{passive:true});
+addEventListener('resize',galSync);
+addEventListener('load',galSync);
+galSync();
+
+let down=false,sx=0,sl=0;
+galEl.addEventListener('mousedown',e=>{down=true;moved=0;sx=e.pageX;sl=galEl.scrollLeft});
+addEventListener('mouseup',()=>{down=false;galEl.classList.remove('drag')});
+galEl.addEventListener('mouseleave',()=>{down=false;galEl.classList.remove('drag')});
+galEl.addEventListener('mousemove',e=>{
+  if(!down)return;
+  const d=e.pageX-sx; moved=Math.abs(d);
+  if(moved>4)galEl.classList.add('drag');
+  galEl.scrollLeft=sl-d;
+});
+
+/* ===== lightbox ===== */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+let cur=0;
+function openLb(i){cur=i;lbImg.src='img/'+files[cur]+'.jpg';lb.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
+function stepLb(d){cur=(cur+d+files.length)%files.length;lbImg.src='img/'+files[cur]+'.jpg'}
+document.getElementById('lbClose').onclick=closeLb;
+document.getElementById('lbNext').onclick=e=>{e.stopPropagation();stepLb(1)};
+document.getElementById('lbPrev').onclick=e=>{e.stopPropagation();stepLb(-1)};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowRight')stepLb(1);
+  if(e.key==='ArrowLeft')stepLb(-1);
+});
+
+/* ===== nawigacja ===== */
+const nav=document.getElementById('nav');
+const onScroll=y=>nav.classList.toggle('solid',y>60);
+
+/* menu mobilne */
+const burger=document.getElementById('burger'), menu=document.getElementById('menu');
+const setMenu=open=>{
+  burger.classList.toggle('open',open);
+  menu.classList.toggle('open',open);
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  document.body.style.overflow=open?'hidden':'';
+};
+burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open'))setMenu(false)});
+addEventListener('resize',()=>{if(innerWidth>900&&menu.classList.contains('open'))setMenu(false)});
+
+/* ===== marquee: zakres usług (pas jak u Hermera) ===== */
+const stripItems=["Renowacja mebli antycznych","Tapicerka drzwi","Naprawianie konstrukcji foteli",
+  "Wyszywanie loga i napisów","Renowacja i naprawa mebli tapicerowanych","Tapicerujemy wnętrza jachtów i żaglówek"];
+const track=document.getElementById('track');
+track.innerHTML=[...stripItems,...stripItems].map(t=>'<span>'+t+'</span>').join('');
+
+/* ===== split-text: rozbicie nagłówka na znaki =====
+   Odwzorowanie sygnaturowej animacji Hermera: każdy znak w osobnym <span>,
+   animowany przez transform + opacity + filter(blur). Treść pozostaje bez zmian. */
+function splitChars(el){
+  if(el.dataset.split)return [...el.querySelectorAll('.sp-c')];
+  const words=(el.textContent||'').split(/(\s+)/);
+  el.textContent='';
+  const chars=[];
+  words.forEach(w=>{
+    if(/^\s+$/.test(w)){ el.appendChild(document.createTextNode(' ')); return; }
+    const wrap=document.createElement('span'); wrap.className='sp-w';
+    [...w].forEach(ch=>{
+      const s=document.createElement('span'); s.className='sp-c'; s.textContent=ch;
+      wrap.appendChild(s); chars.push(s);
+    });
+    el.appendChild(wrap);
+  });
+  el.dataset.split='1';
+  return chars;
+}
+
+/* ===== animacje: GSAP ScrollTrigger (bez smooth scrolla) ===== */
+const hasGSAP = window.gsap && window.ScrollTrigger;
+if(!hasGSAP) document.documentElement.classList.add('no-gsap');
+addEventListener('scroll',()=>onScroll(scrollY),{passive:true});
+
+if(hasGSAP){
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* 1. HERO — split-text z rozmyciem, dokładnie wzorzec Hermera */
+  const heroChars=splitChars(document.getElementById('heroTitle'));
+  const subChars=splitChars(document.getElementById('heroSub'));
+  const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+  tl.from('.hero-frame img',{scale:1.12,duration:2.0,ease:'power2.out',force3D:true})
+    .fromTo(heroChars,
+      {opacity:0,y:'0.6em',filter:'blur(12px)'},
+      {opacity:1,y:'0em',filter:'blur(0px)',duration:1.1,stagger:0.028,force3D:true},'-=1.55')
+    .fromTo(subChars,
+      {opacity:0,y:14,filter:'blur(8px)'},
+      {opacity:1,y:0,filter:'blur(0px)',duration:.9,stagger:0.02,force3D:true},'-=0.7');
+
+  /* 2. parallax hero przy przewijaniu (scrub) */
+  gsap.to('.hero-frame img',{
+    yPercent:12,ease:'none',force3D:true,
+    scrollTrigger:{trigger:'.hero-frame',start:'top top',end:'bottom top',scrub:true}
+  });
+
+  /* 3. nagłówki sekcji — ten sam split z blur */
+  gsap.utils.toArray('.split h2, .gal-head h2, .mid h2, .f-name').forEach(h=>{
+    const chars=splitChars(h);
+    gsap.fromTo(chars,
+      {opacity:0,y:'0.5em',filter:'blur(10px)'},
+      {opacity:1,y:'0em',filter:'blur(0px)',duration:1,ease:'power3.out',stagger:0.018,force3D:true,
+       scrollTrigger:{trigger:h,start:'top 85%',once:true}});
+  });
+
+  /* 4. pozostałe bloki — opacity/y/scale ze staggerem */
+  gsap.utils.toArray('.rv').forEach(el=>{
+    gsap.fromTo(el,{opacity:0,y:42,scale:.97},
+      {opacity:1,y:0,scale:1,duration:1.05,ease:'power3.out',force3D:true,
+       scrollTrigger:{trigger:el,start:'top 85%',once:true}});
+  });
+
+  /* 5. galeria — wejście kafelków z obrotem 3D (scena perspective jak u Hermera) */
+  gsap.fromTo('.gal figure',
+    {opacity:0,y:60,rotateX:-28,transformOrigin:'50% 100%'},
+    {opacity:1,y:0,rotateX:0,duration:1.15,ease:'power3.out',force3D:true,stagger:.06,
+     scrollTrigger:{trigger:'.gal',start:'top 88%',once:true}});
+
+  /* 6. marquee – nieskończony pas sterowany tickerem + reakcja na kierunek scrolla */
+  const half=()=>track.scrollWidth/2;
+  let mx=0, dir=1, base=.4;
+  gsap.ticker.add(()=>{ mx-=base*dir; if(-mx>=half())mx=0; if(mx>0)mx=-half(); gsap.set(track,{x:mx}); });
+  ScrollTrigger.create({onUpdate:s=>{dir=s.direction===-1?-1:1}});
+
+  /* 7. liczniki godzin – odpowiednik animacji val/onUpdate u Hermera */
+  gsap.utils.toArray('.hour-card .time').forEach(el=>{
+    const txt=el.textContent, m=txt.match(/(\d+):00 — (\d+):00/);
+    if(!m)return;
+    const a=+m[1], b=+m[2], o={v1:0,v2:0};
+    gsap.to(o,{v1:a,v2:b,duration:1.4,ease:'power2.out',
+      onUpdate:()=>{el.textContent=Math.round(o.v1)+':00 — '+Math.round(o.v2)+':00'},
+      onComplete:()=>{el.textContent=txt},
+      scrollTrigger:{trigger:el,start:'top 85%',once:true}});
+  });
+
+  addEventListener('load',()=>ScrollTrigger.refresh());
+}
+
+/* szerokość bez paska przewijania – dla pełnej szerokości pasa galerii */
+const setVW=()=>document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px');
+setVW(); addEventListener('resize',setVW);
+</script>
+</body>
+</html>
