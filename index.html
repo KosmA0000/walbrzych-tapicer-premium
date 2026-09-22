@@ -1,632 +1,336 @@
 <!doctype html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Usługi tapicerskie — Marek Jagielski</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tapicer Wałbrzych — usługi tapicerskie Marek Jagielski, ul. Wrocławska 29, tel. 697 981 075</title>
+<meta name="description" content="Zakład tapicerski Marek Jagielski, ul. Wrocławska 29, 58-306 Wałbrzych. Renowacja i naprawa mebli tapicerowanych oraz mebli antycznych, tapicerka samochodowa: dachy w cabrioletach, deska rozdzielcza w skórze, sufity i wykładziny, kierownice. Tel. 697 981 075.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --taupe:#B3A895;        /* ciepłe tło zewnętrzne (jak w referencji) */
-  --taupe-d:#9C917E;
-  --cream:#F5F1EA;        /* płótno treści */
-  --cream-2:#EDE7DC;
-  --brown:#463C31;        /* ciemny brąz – nav, stopka */
-  --brown-d:#2F2820;
-  --ink:#2C2620;
-  --muted:#8A7E6E;
-  --line:rgba(44,38,32,.15);
-  --vw:100vw;             /* nadpisywane skryptem na clientWidth (bez paska przewijania) */
-  --serif:"Cormorant Garamond",Georgia,serif;
-  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--taupe);color:var(--ink);
-  font-family:var(--sans);font-weight:300;line-height:1.65;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1180px,90vw);margin-inline:auto}
-.eyebrow{
-  font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;
-  color:var(--muted);font-weight:400;
-}
+:root{--bg:#f5f1ea;--dark:#463c31;--ink:#3b332a;--muted:#7d7367;--accent:#ece5d8;--accent-soft:#e6ddcd;--surface:#f5f1ea;--blue:var(--accent);--line:rgba(70,60,49,.2);--gold:#b3a895}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1280px,90%);margin:auto}.eyebrow{display:block;margin-bottom:1.25rem;color:var(--muted);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}.mask{overflow:hidden;display:block}.mask>span{display:block}
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 3%;height:78px;pointer-events:none}.bar-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:start}.pill{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 22px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(20,18,16,.42);backdrop-filter:blur(14px);color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.menu{position:relative;justify-self:start}.menu-panel{pointer-events:auto;position:absolute;top:50px;left:0;width:220px;padding:10px;border-radius:22px;background:var(--dark);border:1px solid rgba(255,255,255,.12);color:#fff;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.3s}.menu.open .menu-panel{opacity:1;visibility:visible;transform:none}.menu-panel a{display:block;padding:12px;border-radius:13px;font-size:.82rem}.menu-panel a:hover{background:rgba(255,255,255,.08)}.menu-panel a.menu-phone{display:none}.brand{pointer-events:auto;justify-self:center;display:inline-flex;align-items:center;min-height:42px;padding:0 22px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(20,18,16,.42);backdrop-filter:blur(14px);color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.phone{justify-self:end}.phone i{width:11px;height:11px;background:#fff;border-radius:50%;margin-right:10px}
+.hero{height:260vh;position:relative}.sticky{height:100svh;position:sticky;top:0;overflow:hidden}.hero .sticky{display:grid;place-items:center}.hero-frame{position:absolute;inset:8px;border-radius:35px;overflow:hidden;background:radial-gradient(120% 80% at 76% 12%,#6b5b49 0%,rgba(107,91,73,0) 60%),linear-gradient(180deg,#5a4d3f 0%,#463c31 52%,#2b251e 100%);will-change:width,height,border-radius,transform}.hero-frame img{width:100%;height:100%;object-fit:cover;will-change:transform}.hero-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,13,.56),rgba(28,20,13,.30) 36%,rgba(28,20,13,.86)),radial-gradient(85% 70% at 20% 74%,rgba(28,20,13,.55),rgba(28,20,13,0) 70%)}.hero-copy{position:absolute;z-index:3;left:5%;right:5%;bottom:6%;color:#fff;will-change:opacity,transform}.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem;margin-bottom:1.2rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.hero-meta span+span{position:relative;padding-left:1.1rem}.hero-meta span+span:before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;margin-top:-2px;border-radius:50%;background:var(--gold)}.hero h1{font-weight:600;font-size:clamp(2.8rem,8.5vw,7.5rem);line-height:.93;letter-spacing:-.045em;text-transform:uppercase;margin:0;max-width:12ch}.hero-sub{font-size:1rem;margin:1.4rem 0 0;max-width:38ch;line-height:1.5}
+.trust h2,.offer-intro h2,.prices h2{font-size:clamp(2.8rem,7vw,7rem);line-height:.92;letter-spacing:-.05em;text-transform:uppercase;font-weight:600;margin:0}
+.trust{padding:clamp(5rem,10vw,10rem) 0;background:var(--accent)}.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,7rem);align-items:start}.media{border-radius:28px;overflow:hidden}.media img{width:100%;height:100%;object-fit:cover}.trust .media{position:sticky;top:100px;height:62vh}.trust-head{padding-bottom:clamp(1.4rem,2.8vw,2.4rem);border-bottom:1px solid var(--line);margin-bottom:clamp(3rem,6vw,5rem)}
+.trust-head h2{max-width:12ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
+.trust-copy>p{font-size:clamp(1.08rem,1.5vw,1.4rem);line-height:1.6;margin:1.5rem 0 0}.trust-copy>p:first-child{margin-top:0}.trust-story{margin-top:clamp(5rem,9vw,8rem)}
+.story-panel{padding:clamp(1.7rem,2.8vw,2.8rem) clamp(1.5rem,2.6vw,2.6rem);border-radius:28px;background:var(--accent-soft)}
+.story-panel+.story-panel{margin-top:clamp(.7rem,1.1vw,1rem)}
+.story-panel--dark{background:var(--dark);color:var(--surface)}
+.story-panel--dark .eyebrow{color:rgba(244,243,236,.55)}
+.story-panel-head{margin-bottom:clamp(1.4rem,2.6vw,2.2rem)}
+.story-title{max-width:24ch;margin:0;font-size:clamp(1.9rem,2.7vw,2.85rem);line-height:1;letter-spacing:-.04em;text-transform:uppercase}
+.story-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.story-list li{display:grid;grid-template-columns:3rem minmax(0,1fr);align-items:baseline;gap:clamp(.8rem,1.6vw,1.5rem);padding:clamp(.8rem,1.35vw,1.15rem) 0;border-bottom:1px solid var(--line);transition:padding .28s ease}
+.story-list li:last-child{border-bottom:0;padding-bottom:0}
+.story-list li:hover{padding-left:1rem}
+.story-num{font-size:.82rem;line-height:1;letter-spacing:.1em;color:var(--muted)}
+.story-text{font-size:clamp(1.4rem,2.2vw,2.25rem);line-height:1.08;letter-spacing:-.035em}
+.story-panel--dark .story-list,.story-panel--dark .story-list li{border-color:rgba(244,243,236,.2)}
+.story-panel--dark .story-num{color:rgba(244,243,236,.62)}
+.story-hold{display:none}
+.reviews{position:relative;z-index:5;padding:clamp(5rem,9vw,8rem) 0;background:var(--dark);color:var(--bg);border-radius:34px 34px 0 0}.reviews-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(260px,.55fr);gap:clamp(2rem,8vw,9rem);align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}.reviews-head .eyebrow{color:rgba(244,243,236,.55)}.reviews h2{max-width:11ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}.reviews-score{display:flex;align-items:center;gap:clamp(1rem,1.6vw,1.5rem)}.score-value{flex:0 0 auto;font-size:clamp(3.2rem,5vw,4.8rem);font-weight:600;line-height:1;letter-spacing:-.04em}.score-meta{margin:.4rem 0 0;color:rgba(244,243,236,.7);font-size:.92rem;line-height:1.45}.stars{color:var(--gold);letter-spacing:.16em;font-size:.95rem;line-height:1}.reviews-link{display:inline-flex;align-items:center;gap:.45rem;margin-top:.7rem;padding-bottom:2px;border-bottom:1px solid rgba(244,243,236,.35);font-size:.86rem;transition:border-color .25s,color .25s}.reviews-link:hover{border-color:var(--gold);color:var(--gold)}.reviews-track{list-style:none;display:flex;gap:clamp(.8rem,1.2vw,1.1rem);margin:0;padding:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}.reviews-track::-webkit-scrollbar{display:none}.review{flex:0 0 clamp(265px,26vw,355px);scroll-snap-align:start;display:flex;flex-direction:column;padding:clamp(1.4rem,2vw,2rem);border:1px solid rgba(244,243,236,.18);border-radius:24px;background:rgba(244,243,236,.07)}.review blockquote{margin:1.15rem 0 0;font-size:clamp(1rem,1.1vw,1.1rem);line-height:1.52}.review-author{margin-top:auto;padding-top:1.7rem;border:0;text-align:left;text-transform:none;letter-spacing:normal;color:inherit;font-size:.92rem}.review-author span{display:block;margin-top:.35rem;color:rgba(244,243,236,.55);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.reviews-nav{display:flex;gap:.6rem;margin-top:clamp(1.5rem,2.5vw,2.2rem)}.reviews-nav button{width:52px;height:52px;display:grid;place-items:center;border:1px solid rgba(244,243,236,.28);border-radius:50%;background:transparent;color:inherit;cursor:pointer;transition:background .25s,color .25s,opacity .25s}.reviews-nav button:hover:not(:disabled){background:var(--bg);color:var(--dark)}.reviews-nav button:disabled{opacity:.28;cursor:default}@media(max-width:760px){.reviews{padding:5rem 0;border-radius:24px 24px 0 0}.reviews-head{display:block;margin-bottom:2.5rem}.reviews h2{font-size:clamp(2.8rem,13vw,4.2rem)}.reviews-score{margin-top:1.75rem}.review{flex-basis:80%;padding:1.35rem;border-radius:20px}.reviews-nav button{width:46px;height:46px}}
 
-/* ---------- NAV ---------- */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:60;padding:1.5rem 0;
-  transition:background .45s ease,padding .45s ease;
-}
-nav.solid{background:var(--brown);padding:.85rem 0}
-.nav-in{display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.brand{
-  font-family:var(--serif);font-size:1.15rem;letter-spacing:.24em;
-  text-transform:uppercase;color:#F5F1EA;white-space:nowrap;
-}
-.nav-links{display:flex;gap:2.4rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
-.nav-links a{color:rgba(245,241,234,.82);position:relative;padding-bottom:4px}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
-  background:#F5F1EA;transition:width .4s cubic-bezier(.16,1,.3,1);
-}
-.nav-links a:hover::after{width:100%}
-.nav-tel{
-  font-size:.72rem;letter-spacing:.14em;color:#F5F1EA;
-  border:1px solid rgba(245,241,234,.4);padding:.55rem 1.2rem;border-radius:100px;
-  transition:all .4s ease;white-space:nowrap;
-}
-.nav-tel:hover{background:#F5F1EA;color:var(--brown)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:clamp(1.6rem,3vh,2.4rem)}.hero-btn{display:inline-flex;align-items:center;gap:.75rem;min-height:58px;padding:0 30px;border-radius:999px;background:var(--gold);color:#12181f;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:transform .3s,background .3s}.hero-btn:hover{transform:translateY(-3px);background:#fff}.hero-btn i{width:8px;height:8px;border-radius:50%;background:currentColor}.hero-btn--map{border:1px solid rgba(255,255,255,.4);background:rgba(20,18,16,.32);color:#fff}.hero-btn--map:hover{border-color:#fff;background:rgba(20,18,16,.68);color:#fff}
+.trust-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.7rem,1.1vw,1rem);align-self:start}@media(min-width:761px){.trust .split{align-items:start}.trust-facts{position:sticky;top:100px}}.fact{display:flex;flex-direction:column;gap:.5rem;padding:clamp(1.3rem,2.2vw,2rem);border:1px solid var(--line);border-radius:24px;background:var(--accent-soft)}.fact-num{font-size:clamp(1.9rem,3vw,2.9rem);font-weight:600;line-height:1;letter-spacing:-.04em}.fact-lab{color:var(--muted);font-size:.78rem;letter-spacing:.06em;line-height:1.4}
+.lic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.7rem,1.1vw,1rem);margin-top:clamp(2.5rem,4vw,3.5rem)}.lic{display:flex;flex-direction:column;min-height:210px;padding:clamp(1.4rem,2.2vw,2rem);border:1px solid rgba(244,243,236,.18);border-radius:24px;background:rgba(244,243,236,.06)}.lic h3{margin:1.1rem 0 0;font-size:clamp(1.25rem,1.9vw,1.75rem);line-height:1.08;text-transform:uppercase;letter-spacing:-.02em}.lic p{margin:.9rem 0 0;color:rgba(244,243,236,.72);font-size:.95rem;line-height:1.55}.auth-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem;margin-top:clamp(2rem,3vw,2.6rem);padding-top:clamp(1.4rem,2.2vw,2rem);border-top:1px solid rgba(244,243,236,.2)}.auth-lab{color:rgba(244,243,236,.65);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}.auth-chips{display:flex;flex-wrap:wrap;gap:.5rem}.auth-chip{display:inline-flex;align-items:center;min-height:40px;padding:0 18px;border:1px solid rgba(244,243,236,.3);border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.06em}
+@media(max-width:760px){.trust-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.lic-grid{grid-template-columns:1fr}.lic{min-height:0}.hero-btn{min-height:52px;padding:0 24px}}
 
-/* hamburger – tylko mobile */
-.burger{
-  display:none;width:2.75rem;height:2.75rem;flex:0 0 auto;
-  background:transparent;border:1px solid rgba(245,241,234,.4);border-radius:50%;
-  cursor:pointer;padding:0;place-items:center;
+.offer{padding:clamp(5rem,10vw,10rem) 0}.offer-intro{max-width:1000px;margin-bottom:8rem}.offer-intro p{font-size:clamp(1.25rem,2.5vw,2.25rem);line-height:1.35;margin:2rem 0 0}.chapters{display:grid;grid-template-columns:minmax(220px,.65fr) 1.7fr;gap:8vw;align-items:start}.chapter-nav{position:sticky;top:110px;border-top:1px solid var(--line)}.chapter-nav a{display:block;padding:1rem 0;border-bottom:1px solid var(--line);color:var(--muted);transition:.25s}.chapter-nav a.active{color:var(--ink);padding-left:14px}.chapter{padding:0 0 8rem;scroll-margin-top:110px}.chapter h3{font-size:clamp(2rem,4vw,4.5rem);line-height:1;text-transform:uppercase;letter-spacing:-.035em;margin:0 0 2.5rem}.chapter ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}.chapter li{position:relative;padding:1.05rem 0 1.05rem 2rem;border-bottom:1px solid var(--line);font-size:clamp(1rem,1.45vw,1.22rem);line-height:1.45}.chapter li:before{content:"—";position:absolute;left:0;color:var(--muted)}
+.reviews{position:relative;z-index:5;padding:clamp(5rem,9vw,8rem) 0;background:var(--dark);color:var(--bg);border-radius:34px 34px 0 0}
+.reviews-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(260px,.55fr);gap:clamp(2rem,8vw,9rem);align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.reviews-head .eyebrow{color:rgba(244,243,236,.55)}
+.reviews h2{max-width:11ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
+.reviews-score{display:flex;align-items:center;gap:clamp(1rem,1.6vw,1.5rem)}
+.score-value{flex:0 0 auto;font-size:clamp(3.2rem,5vw,4.8rem);font-weight:600;line-height:1;letter-spacing:-.04em}
+.score-meta{margin:.4rem 0 0;color:rgba(244,243,236,.7);font-size:.92rem;line-height:1.45}
+.reviews-link{display:inline-flex;align-items:center;gap:.45rem;margin-top:.7rem;padding-bottom:2px;border-bottom:1px solid rgba(244,243,236,.35);font-size:.86rem;transition:border-color .25s,color .25s}
+.reviews-link:hover{border-color:var(--gold);color:var(--gold)}
+.reviews-link svg{flex:0 0 auto}
+.stars{color:var(--gold);letter-spacing:.16em;font-size:.95rem;line-height:1}
+.reviews-track{list-style:none;display:flex;gap:clamp(.8rem,1.2vw,1.1rem);margin:0;padding:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.reviews-track::-webkit-scrollbar{display:none}
+.review{flex:0 0 clamp(265px,26vw,355px);scroll-snap-align:start;display:flex;flex-direction:column;padding:clamp(1.4rem,2vw,2rem);border:1px solid rgba(244,243,236,.18);border-radius:24px;background:rgba(244,243,236,.07)}
+.review blockquote{margin:1.15rem 0 0;font-size:clamp(1rem,1.1vw,1.1rem);line-height:1.52}
+.review-author{margin-top:auto;padding-top:1.7rem;border:0;text-align:left;text-transform:none;letter-spacing:normal;color:inherit;font-size:.92rem}
+.review-author span{display:block;margin-top:.35rem;color:rgba(244,243,236,.55);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.reviews-nav{display:flex;gap:.6rem;margin-top:clamp(1.5rem,2.5vw,2.2rem)}
+.reviews-nav button{width:52px;height:52px;display:grid;place-items:center;border:1px solid rgba(244,243,236,.28);border-radius:50%;background:transparent;color:inherit;cursor:pointer;transition:background .25s,color .25s,opacity .25s}
+.reviews-nav button:hover:not(:disabled){background:var(--bg);color:var(--dark)}
+.reviews-nav button:disabled{opacity:.28;cursor:default}
+.prices{padding:clamp(5rem,10vw,10rem) 0;background:var(--dark);color:var(--bg)}.prices-head{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end}.prices-head .media{height:330px}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:4rem;border-top:1px solid rgba(255,255,255,.18);border-left:1px solid rgba(255,255,255,.18)}.price{min-height:230px;padding:24px;border-right:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;justify-content:space-between}.price h3{font-size:clamp(1.2rem,2vw,2rem);line-height:1.08;text-transform:uppercase;margin:0}.price strong{font-size:clamp(2rem,4vw,4rem);font-weight:500}.disclaimer{max-width:65ch;margin:2.5rem 0 0;color:rgba(242,238,231,.7);line-height:1.55}
+.promo{padding:10vh 0;background:var(--dark)}.promo-frame{width:68vw;margin:auto;border-radius:999px;overflow:hidden;will-change:width,border-radius}.promo-frame img{width:100%;height:auto}
+.contact{min-height:100svh;position:relative;background:var(--bg);overflow:hidden}.contact-data{position:relative;z-index:1;min-height:100svh;padding:130px 0 60px;display:flex;align-items:end}.contact-data h2{font-size:clamp(3rem,8vw,8rem);line-height:.88;letter-spacing:-.05em;text-transform:uppercase;margin:0 0 4rem;max-width:10ch}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;border-top:1px solid var(--line);padding-top:1.5rem;line-height:1.7}.contact-grid a{text-decoration:underline;text-underline-offset:4px}.contact-id{margin-top:2rem;color:var(--muted);line-height:1.8}
+.tags{padding:4rem 0;border-top:1px solid var(--line)}.tags p{font-size:clamp(.9rem,1.3vw,1.1rem);line-height:1.55;color:var(--muted);margin:0}footer{text-align:center;padding:2rem 5%;border-top:1px solid var(--line);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}footer a{text-decoration:underline;text-underline-offset:3px;transition:color .25s}footer a:hover{color:var(--ink)}
+@media(max-width:760px){.bar{padding:12px}.brand{display:none}.phone{display:none}.pill{min-height:38px;padding:0 18px}.menu.open .pill{position:relative;z-index:2}.menu.open .menu-panel{display:flex;flex-direction:column;position:fixed;inset:8px;width:auto;height:calc(100svh - 16px);padding:74px 24px 24px;border-radius:24px}.menu.open .menu-panel a{font-size:1.5rem;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+  .menu.open .menu-panel a.menu-phone{display:inline-flex;align-items:center;justify-content:center;margin-top:auto;padding:18px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.07);font-size:1.15rem;font-weight:600;letter-spacing:.02em}
+  .menu.open .menu-panel a.menu-phone i{width:9px;height:9px;margin-right:12px;border-radius:50%;background:#fff}.hero{height:auto}.sticky{position:relative;height:auto}.hero .sticky{height:100svh}.hero-frame{inset:8px}.hero-copy{left:24px;right:24px;bottom:7%}.hero h1{font-size:clamp(2.5rem,11vw,3.25rem);line-height:.95}.hero-sub{font-size:.9rem}.split{grid-template-columns:1fr}.trust-head{padding-bottom:1.2rem;margin-bottom:2.2rem}.trust-head h2{max-width:none;font-size:clamp(2.4rem,12.3vw,4.2rem)}.trust-copy>p{font-size:1rem;margin-top:1.2rem}.trust .media{position:relative;top:auto;height:auto;aspect-ratio:998/350}.traits{grid-template-columns:1fr}.traits div{min-height:auto}.reviews{padding:5rem 0;border-radius:24px 24px 0 0}.reviews-head{display:block;margin-bottom:2.5rem}.reviews h2{font-size:clamp(2.8rem,13vw,4.2rem)}.reviews-score{margin-top:1.75rem}.review{flex-basis:80%;padding:1.35rem;border-radius:20px}.reviews-nav button{width:46px;height:46px}.offer-intro{margin-bottom:5rem}.chapters{grid-template-columns:1fr}.chapter-nav{display:none}.chapter{padding-bottom:5rem}.prices-head{grid-template-columns:1fr}.prices-head .media{height:auto}.price-grid{grid-template-columns:1fr}.price{min-height:180px}.promo{padding:8px 0}.promo-frame{width:calc(100% - 16px);border-radius:20px}.contact{min-height:auto;display:flex;flex-direction:column}.contact-data{min-height:auto;padding:4rem 0}.contact-grid{grid-template-columns:1fr}.tags{padding:3rem 0}}
+@media(max-width:760px){.chapters>div{min-width:0}.chapter h3,.chapter li{overflow-wrap:anywhere}}
+.chapters{grid-template-columns:minmax(270px,.72fr) 1.45fr;gap:6vw}
+.chapter-nav{top:95px;padding:10px;background:var(--dark);border:0;border-radius:25px;box-shadow:0 22px 60px rgba(10,10,10,.12)}
+.chapter-nav a{position:relative;padding:1.05rem 2.6rem 1.05rem 1.1rem;border:0;border-radius:17px;color:rgba(242,238,231,.6);line-height:1.25}
+.chapter-nav a+a{margin-top:3px}
+.chapter-nav a:after{content:"";position:absolute;right:1rem;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:currentColor;opacity:.45}
+.chapter-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.chapter-nav a.active{padding-left:1.1rem;background:var(--bg);color:var(--ink)}
+.chapter-nav a.active:after{opacity:1}
+.chapter{padding-bottom:9rem}
+.chapter h3{max-width:13ch}
+.price-grid{display:block;margin-top:4rem;border-left:0}
+.price{min-height:0;padding:1.55rem 0;border-right:0;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.price:first-child{border-top:1px solid rgba(255,255,255,.18)}
+.price h3{font-size:clamp(1.25rem,2.4vw,2.5rem);letter-spacing:-.025em;max-width:27ch}
+.price strong{font-size:clamp(1.5rem,3vw,3.2rem);white-space:nowrap}
+.price:hover h3{padding-left:1rem}.price h3{transition:padding .25s}
+@media(max-width:760px){
+  .trust-story{margin-top:5rem}.story-block+.story-block{margin-top:3.2rem}.story-block-head{margin-bottom:1.4rem}.story-title{max-width:14ch;font-size:clamp(2.1rem,9vw,3.2rem)}
+  .story-panel{padding:1.5rem 1.2rem;border-radius:20px}.story-panel+.story-panel{margin-top:.6rem}
+  .story-list li{grid-template-columns:2.4rem minmax(0,1fr);gap:.7rem;padding:.85rem 0}.story-list li:hover{padding-left:0}.story-text{font-size:clamp(1.15rem,4.8vw,1.55rem)}
+  .chapters{display:block}.chapter-nav{display:flex;gap:6px;position:relative;top:auto;z-index:1;overflow-x:auto;width:100%;margin:0 0 2.5rem;padding:7px;border-radius:18px;scrollbar-width:none}
+  .chapter-nav::-webkit-scrollbar{display:none}.chapter-nav a{flex:0 0 220px;padding:.8rem 2rem .8rem .9rem;font-size:.78rem}.chapter-nav a+a{margin:0}.chapter-nav a.active{padding-left:.9rem}
+  .chapters>div{margin-top:0}.chapter{padding-bottom:5rem}
+  .price{grid-template-columns:1fr;gap:.8rem;padding:1.35rem 0}.price strong{justify-self:start}.price:hover h3{padding-left:0}
 }
-.burger span{
-  display:block;width:16px;height:1px;background:#F5F1EA;margin:3.5px auto;
-  transition:transform .4s cubic-bezier(.16,1,.3,1),opacity .3s ease;
-}
-/* odstęp między kreskami to 8px (1px wysokości + 2×3.5px marginesu) */
-.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+/* Jedna choreografia scrolla z odmiennym ruchem dla kazdej sceny. */
+h1,h2,h3,h4,.eyebrow,.chapter-nav a{text-wrap:balance;hyphens:none}
+p,li,.traits div,.contact-grid div{text-wrap:pretty;hyphens:none}
+.chapter-media{display:none}
+@media(min-width:761px){
+  .hero{height:100svh;z-index:1}.hero .sticky{position:relative}.hero-frame{will-change:auto}.hero-frame img{will-change:auto}
+  .trust{position:relative;z-index:4;border-radius:34px 34px 0 0;overflow:clip}
+  .trust .split{min-height:auto;align-items:center}.trust .media{top:19vh;height:62vh}.trust-copy>p{max-width:38ch}
+  .trust-story{margin-top:clamp(6rem,10vw,9rem)}
+  .story-hold{display:block;height:60vh}
 
-.menu{
-  position:fixed;inset:0;z-index:55;background:var(--brown);
-  display:grid;place-content:center;gap:1.6rem;text-align:center;
-  opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease;
-}
-.menu.open{opacity:1;visibility:visible}
-.menu a{
-  color:#F5F1EA;font-family:var(--serif);font-size:2rem;letter-spacing:.06em;
-  text-transform:uppercase;
-}
-.menu .m-contact{
-  font-family:var(--sans);font-size:1rem;letter-spacing:.1em;text-transform:none;
-  color:rgba(245,241,234,.82);
-}
+  .offer{position:relative;z-index:3;background:var(--bg);border-radius:34px 34px 0 0}
+  .offer-intro{min-height:68vh;display:flex;flex-direction:column;justify-content:center;margin-bottom:0}.offer-intro p{max-width:29ch}
+  .chapters{height:560vh;position:relative;display:grid;grid-template-columns:minmax(300px,.78fr) 1.42fr;gap:5vw;align-items:start}
+  .chapter-nav{position:sticky;top:6vh;height:88vh;padding:10px;background:var(--dark);border:0;border-radius:28px;box-shadow:0 25px 70px rgba(10,10,10,.15);overflow:hidden}
+  .chapter-media{display:block;height:34%;margin-bottom:8px;border-radius:20px;overflow:hidden;background:#111}
+  .chapter-media img{width:100%;height:100%;object-fit:cover;object-position:50% var(--image-position,20%);transform:scale(var(--image-scale,1));opacity:var(--image-opacity,1);transition:none}
+  .chapter-nav a{height:calc((66% - 38px)/4);display:flex;align-items:center;position:relative;padding:.8rem 2.5rem .8rem 1rem;border:0;border-radius:16px;color:rgba(242,238,231,.55);line-height:1.15}
+  .chapter-nav a+a{margin-top:6px}.chapter-nav a:after{content:"";position:absolute;right:1rem;top:50%;width:9px;height:9px;margin-top:-4px;border-radius:50%;background:currentColor}
+  .chapter-nav a.active{padding-left:1rem;background:var(--bg);color:var(--ink)}
+  .chapters>div{position:sticky;top:6vh;height:88vh;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.24)}
+  .chapter{counter-reset:service;position:absolute;inset:0;padding:clamp(2rem,4vw,4rem);opacity:0;visibility:hidden;background:var(--bg)}
+  .chapter:first-child{opacity:1;visibility:visible}.chapter:before{content:attr(data-index);position:absolute;right:2rem;top:1.5rem;color:var(--muted);font-size:.72rem;letter-spacing:.14em}
+  .chapter h3{max-width:13ch;font-size:clamp(2rem,3.35vw,3.65rem);margin:0 0 1.6rem;letter-spacing:-.04em}
+  .chapter ul{border-top:1px solid var(--line)}.chapter li{counter-increment:service;padding:.68rem 0 .68rem 2.8rem;font-size:clamp(.84rem,1vw,1rem);line-height:1.25;transform-origin:left center}
+  .chapter li:before{content:counter(service,decimal-leading-zero);font-size:.62rem;top:.82rem}
 
-@media(max-width:900px){
-  .nav-links{display:none}
-  .burger{display:grid}
-  /* pełny numer nie mieści się obok marki – na mobile zastępuje go hamburger */
-  .nav-tel{display:none}
-  .brand{font-size:.95rem;letter-spacing:.18em}
+  .prices{height:440vh;padding:0;position:relative;z-index:6;border-radius:34px 34px 0 0;overflow:clip}
+  .prices>.wrap{position:sticky;top:0;height:100svh;padding-top:8vh}.prices-head{height:32vh}.prices-head .media{height:100%;border-radius:999px}.prices h2{font-size:clamp(3rem,6vw,6rem)}
+  .price-grid{position:absolute;left:5%;right:5%;bottom:10vh;height:36vh;display:block;margin:0;border:0}
+  .price{position:absolute;inset:0;min-height:0;padding:2rem 0;border:0;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:1fr auto;align-items:center;opacity:0;visibility:hidden}
+  .price:first-child{opacity:1;visibility:visible}.price h3{max-width:19ch;font-size:clamp(2rem,4vw,4.4rem);letter-spacing:-.04em}.price strong{font-size:clamp(3rem,6vw,6.5rem)}
+  .disclaimer{position:absolute;right:5%;top:9vh;width:34ch;margin:0;text-align:right;font-size:.78rem}
+  .promo{position:relative;z-index:7}.contact{z-index:8}
 }
-@media(min-width:901px){.menu{display:none}}
+@media(max-width:760px){
+  .chapter-media{display:block;height:190px;margin:-1px -1px 10px;border-radius:18px;overflow:hidden}.chapter-media img{width:100%;height:100%;object-fit:cover}
+  .chapter{counter-reset:service}.chapter li{counter-increment:service;padding-left:2.6rem;overflow-wrap:normal}.chapter li:before{content:counter(service,decimal-leading-zero);font-size:.62rem;top:1.25rem}
+}
+.offer-intro{max-width:none;min-height:0!important;display:grid!important;grid-template-columns:minmax(260px,.78fr) minmax(0,1.22fr);gap:clamp(2rem,7vw,8rem);align-items:end;margin:0 0 clamp(3.5rem,7vw,6rem)}
+.offer-intro h2{max-width:9ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
+.offer-intro p{max-width:43ch!important;margin:0;font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.5}
+.offer-accordion{display:grid;gap:.9rem;overflow-anchor:none}
+html,body{overflow-anchor:none}
+.offer-item{overflow:hidden;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.2);transition:background-color .35s ease,border-color .35s ease}
+.offer-item.is-open{border-color:rgba(23,39,31,.24);background:var(--accent-soft)}
+.offer-trigger{width:100%;min-height:clamp(105px,12vw,155px);padding:clamp(1.25rem,2.7vw,2.5rem);border:0;display:grid;grid-template-columns:4rem minmax(0,1fr) 3.5rem;gap:clamp(1rem,2.4vw,2.5rem);align-items:center;background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.offer-trigger:hover{background:rgba(255,255,255,.28)}
+.offer-trigger:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.offer-number{align-self:start;padding-top:.45rem;color:var(--muted);font-size:.68rem;letter-spacing:.12em}
+.offer-name{max-width:23ch;font-size:clamp(1.65rem,3.5vw,4rem);font-weight:500;line-height:.98;letter-spacing:-.045em;text-transform:uppercase}
+.offer-toggle{position:relative;width:3.25rem;height:3.25rem;border:1px solid var(--line);border-radius:50%;justify-self:end;transition:background-color .3s ease,transform .35s ease}
+.offer-toggle:before,.offer-toggle:after{content:"";position:absolute;left:50%;top:50%;width:16px;height:1px;background:currentColor;transform:translate(-50%,-50%);transition:transform .35s ease}
+.offer-toggle:after{transform:translate(-50%,-50%) rotate(90deg)}
+.offer-item.is-open .offer-toggle{background:var(--dark);color:var(--bg);transform:rotate(180deg)}
+.offer-item.is-open .offer-toggle:after{transform:translate(-50%,-50%) rotate(0)}
+.offer-panel{display:grid;grid-template-rows:0fr;opacity:0;pointer-events:none;transition:grid-template-rows .45s cubic-bezier(.22,1,.36,1),opacity .25s ease}
+.offer-item.is-open .offer-panel{grid-template-rows:1fr;opacity:1;pointer-events:auto}
+.offer-panel-inner{overflow:hidden}
+.offer-panel ul{counter-reset:offer-service;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin:0;padding:0 clamp(1.25rem,2.7vw,2.5rem) clamp(1.25rem,2.7vw,2.5rem);list-style:none}
+.offer-panel li{counter-increment:offer-service;position:relative;min-height:108px;padding:1.35rem 1.35rem 1.35rem 3.55rem;border:1px solid rgba(23,39,31,.13);border-radius:20px;display:flex;align-items:flex-start;background:rgba(243,240,232,.72);font-size:clamp(.94rem,1.08vw,1.05rem);line-height:1.42;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .45s cubic-bezier(.22,1,.36,1),background-color .3s ease}
+.offer-panel li:before{content:counter(offer-service,decimal-leading-zero);position:absolute;left:1.25rem;top:1.55rem;color:var(--muted);font-size:.6rem;letter-spacing:.1em}
+.offer-item.is-open .offer-panel li{opacity:1;transform:none}.offer-item.is-open .offer-panel li:nth-child(2){transition-delay:.035s}.offer-item.is-open .offer-panel li:nth-child(3){transition-delay:.07s}.offer-item.is-open .offer-panel li:nth-child(4){transition-delay:.105s}.offer-item.is-open .offer-panel li:nth-child(5){transition-delay:.14s}.offer-item.is-open .offer-panel li:nth-child(6){transition-delay:.175s}.offer-item.is-open .offer-panel li:nth-child(7){transition-delay:.21s}.offer-item.is-open .offer-panel li:nth-child(8){transition-delay:.245s}.offer-item.is-open .offer-panel li:nth-child(9){transition-delay:.28s}.offer-item.is-open .offer-panel li:nth-child(10){transition-delay:.315s}.offer-item.is-open .offer-panel li:nth-child(11){transition-delay:.35s}.offer-item.is-open .offer-panel li:nth-child(12){transition-delay:.385s}
+@media(max-width:760px){
+  .offer{padding-top:5rem}.offer-intro{display:block!important;margin-bottom:3rem}.offer-intro-heading{margin-bottom:2rem}.offer-intro h2{font-size:clamp(2.8rem,14vw,4.2rem)}.offer-intro p{font-size:1rem}
+  .offer-trigger{min-height:94px;padding:1.15rem .9rem;grid-template-columns:2.5rem minmax(0,1fr) 2.75rem;gap:.7rem}.offer-number{padding-top:.25rem}.offer-name{min-width:0;max-width:none;font-size:clamp(1.15rem,5.2vw,1.5rem);line-height:1.04;overflow-wrap:break-word;text-wrap:pretty}.offer-toggle{width:2.65rem;height:2.65rem}
+  .offer-accordion{gap:.7rem}.offer-item{border-radius:22px}.offer-panel ul{grid-template-columns:1fr;gap:.6rem;padding:0 .8rem .8rem}.offer-panel li{min-height:0;padding:1rem 1rem 1rem 3.1rem;border-radius:16px;font-size:.94rem}.offer-panel li:before{left:1rem;top:1.2rem}
+}
+.prices{height:auto!important;padding:clamp(5rem,10vw,9rem) 0!important;position:relative;z-index:6;border-radius:34px 34px 0 0;overflow:hidden;background:var(--dark);color:var(--bg)}
+.prices>.wrap{position:relative!important;top:auto!important;height:auto!important;padding-top:0!important}
+.prices-head{height:auto!important;display:grid;grid-template-columns:minmax(0,.9fr) minmax(280px,.55fr);gap:clamp(2rem,8vw,9rem);align-items:end;margin-bottom:clamp(3.5rem,7vw,6rem)}
+.prices-head>p{max-width:37ch;margin:0;color:rgba(242,238,231,.72);font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.5}
+.prices h2{max-width:9ch;font-size:clamp(3rem,6.5vw,6.8rem)!important;line-height:.9}
+.price-grid{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;height:auto!important;display:grid!important;grid-template-columns:1fr!important;gap:.8rem;margin:0!important;border:0!important}
+.price{position:relative!important;inset:auto!important;min-height:clamp(125px,12vw,165px)!important;padding:clamp(1.3rem,2.7vw,2.5rem)!important;border:1px solid rgba(242,238,231,.19)!important;border-radius:28px;display:grid!important;grid-template-columns:4rem minmax(0,1fr) auto!important;gap:clamp(1rem,2.5vw,2.5rem)!important;align-items:center!important;background:rgba(242,238,231,.055);opacity:1!important;visibility:visible!important;transform:none!important;transition:background-color .3s ease,border-color .3s ease}
+.price:hover{border-color:rgba(242,238,231,.35)!important;background:rgba(242,238,231,.09)}
+.price-number{align-self:start;padding-top:.35rem;color:rgba(242,238,231,.52);font-size:.68rem;letter-spacing:.12em}
+.price h3{max-width:25ch!important;margin:0;font-size:clamp(1.45rem,3vw,3.5rem)!important;font-weight:500;line-height:1!important;letter-spacing:-.04em!important;text-transform:uppercase}
+.price strong{justify-self:end;font-size:clamp(1.7rem,3.5vw,4rem)!important;font-weight:500;line-height:1;white-space:nowrap}
+.disclaimer{position:static!important;width:auto!important;max-width:65ch!important;margin:2rem 0 0!important;color:rgba(242,238,231,.58)!important;text-align:left!important;font-size:.78rem!important;line-height:1.55}
+@media(max-width:760px){
+  .prices{padding:5rem 0!important;border-radius:24px 24px 0 0}.prices-head{display:block;margin-bottom:3rem}.prices-head>p{margin-top:1.75rem;font-size:1rem}.prices h2{font-size:clamp(2.8rem,14vw,4.2rem)!important}
+  .price-grid{gap:.65rem}.price{min-height:0!important;padding:1.2rem!important;border-radius:20px;grid-template-columns:2.3rem minmax(0,1fr)!important;gap:.7rem!important}.price-number{padding-top:.2rem}.price h3{font-size:clamp(1.15rem,5.3vw,1.55rem)!important;line-height:1.05!important}.price strong{grid-column:2;justify-self:start;margin-top:.65rem;font-size:clamp(1.55rem,8vw,2.35rem)!important}.disclaimer{margin-top:1.5rem!important}
+}
+.contact{min-height:auto!important;position:relative;z-index:8;padding:clamp(6rem,10vw,10rem) 0;background:var(--accent);overflow:hidden;border-radius:34px 34px 0 0}
+.contact-data{position:relative;z-index:1;min-height:0!important;padding:0!important;display:block!important}
+.contact-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(280px,.55fr);gap:clamp(2rem,8vw,9rem);align-items:end;margin-bottom:clamp(3.5rem,7vw,6rem)}
+.contact-head h2{max-width:10ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}
+.contact-head>p{max-width:37ch;margin:0;color:rgba(23,39,31,.72);font-size:clamp(1.05rem,1.5vw,1.35rem);line-height:1.5}
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;border:0!important;padding:0!important;line-height:1.55}
+.contact-card{min-height:0;padding:clamp(1.5rem,2.6vw,2.4rem);border:1px solid var(--line);border-radius:28px;display:flex;flex-direction:column;background:var(--accent-soft);transition:transform .3s ease,box-shadow .3s ease}
+.contact-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(23,39,31,.1)}
+.contact-card-head{display:flex;align-items:baseline;gap:.9rem;padding-bottom:clamp(1rem,1.6vw,1.3rem);border-bottom:1px solid var(--line)}
+.contact-number{font-size:.82rem;line-height:1;letter-spacing:.1em;color:var(--muted)}
+.contact-card p{margin:clamp(1.2rem,1.9vw,1.6rem) 0 0;font-size:clamp(1.05rem,1.4vw,1.28rem);line-height:1.55}
+.contact-card a{text-decoration:none;transition:color .25s}.contact-card a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact-label{color:var(--ink);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.contact-id{margin-top:clamp(1.2rem,1.9vw,1.6rem);padding-top:clamp(1rem,1.5vw,1.2rem);border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.7}
+.story-panel--dark{background:var(--dark)}
+.offer{background:var(--bg);color:var(--ink)}.offer-item.is-open{background:var(--dark);border-color:rgba(23,39,31,.35)}.offer-item.is-open .offer-trigger{color:var(--surface)}.offer-item.is-open .offer-toggle{border-color:rgba(244,243,236,.35)}.offer-panel li{color:var(--dark);background:var(--bg)}.offer-panel li:before{color:#6d7d8e}
+@media(max-width:760px){
+  .contact{padding:5rem 0;border-radius:24px 24px 0 0}.contact-head{display:block;margin-bottom:3rem}.contact-head h2{font-size:clamp(2.8rem,14vw,4.2rem)}.contact-head>p{margin-top:1.75rem;font-size:1rem}.contact-grid{grid-template-columns:1fr;gap:.65rem}.contact-card{min-height:0;padding:1.35rem;border-radius:20px}.contact-card p{margin-top:1.2rem;font-size:1rem}.contact-id{margin-top:1.2rem;padding-top:1rem}
+}
+@media(prefers-reduced-motion:reduce){.hero{height:auto}.hero .sticky{position:relative}.reveal{opacity:1!important;transform:none!important}.offer-item,.offer-toggle,.offer-toggle:after,.offer-panel{transition:none!important}}
 
-/* ---------- HERO (kadr bez przycinania) ---------- */
-header{position:relative;background:var(--taupe)}
-.hero-frame{
-  position:relative;height:100svh;min-height:520px;width:100%;
-  overflow:hidden;background:var(--brown-d);
+/* --- galeria pozioma --- */.works{position:relative;z-index:6;padding:clamp(5rem,10vw,9rem) 0;background:var(--accent-soft)}.works-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.62fr);gap:clamp(2rem,8vw,8rem);align-items:end;margin-bottom:clamp(2.5rem,4vw,3.5rem)}.works h2{max-width:11ch;margin:0;font-size:clamp(3rem,6.5vw,6.8rem);font-weight:600;line-height:.9;letter-spacing:-.05em;text-transform:uppercase}.works-head p{max-width:40ch;margin:0;color:var(--muted);font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.55}.gal-track{list-style:none;display:flex;gap:clamp(.7rem,1.1vw,1rem);margin:0;padding:0;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;scroll-behavior:smooth}.gal-track::-webkit-scrollbar{display:none}.gal-item{position:relative;flex:0 0 clamp(250px,26vw,360px);scroll-snap-align:start;overflow:hidden;border-radius:24px;background:var(--dark);border:1px solid var(--line)}.gal-item img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .6s ease}.gal-item:hover img{transform:scale(1.04)}.gal-nav{display:flex;gap:.6rem;margin-top:clamp(1.5rem,2.5vw,2.2rem)}.gal-nav button{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;color:inherit;cursor:pointer;transition:background .25s,color .25s,opacity .25s}.gal-nav button:hover:not(:disabled){background:var(--dark);color:var(--bg)}.gal-nav button:disabled{opacity:.28;cursor:default}@media(max-width:760px){.works{padding:5rem 0}.works-head{display:block;margin-bottom:2.2rem}.works h2{font-size:clamp(2.7rem,12vw,4rem)}.works-head p{margin-top:1.4rem}.gal-item{flex-basis:78%}.gal-nav button{width:46px;height:46px}}
+/* --- dojazd: zdjecie witryny w naturalnych proporcjach --- */#dojazd .media{height:auto;aspect-ratio:1537/918}
+/* --- dojazd: wskazówki, godziny i szybki kontakt na telefonie --- */
+#dojazd .trust-head h2{max-width:none}
+#dojazd .split{align-items:stretch}
+#dojazd .media{position:relative;top:auto;height:100%;aspect-ratio:auto;background:transparent}
+#dojazd .media:before{display:none}
+#dojazd .media img{position:relative;z-index:1;object-fit:contain;object-position:center;will-change:auto}
+#dojazd .hero-btn{font-size:.82rem}
+.directions-details{margin-top:clamp(2rem,4vw,3.5rem);padding-top:clamp(1.5rem,2.8vw,2.4rem);border-top:1px solid var(--line)}
+.directions-details h3{margin:0 0 1rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.directions-list{display:grid;gap:.8rem;margin:0;padding:0;list-style:none;counter-reset:directions}
+.directions-list li{counter-increment:directions;position:relative;padding-left:2.2rem;font-size:clamp(1rem,1.25vw,1.12rem);line-height:1.5}
+.directions-list li:before{content:counter(directions,decimal-leading-zero);position:absolute;top:.2rem;left:0;color:var(--muted);font-size:.65rem;letter-spacing:.1em}
+.directions-hours{margin-top:clamp(2rem,4vw,3.5rem)}
+.directions-hours .contact-card{max-width:28rem;background:var(--accent-soft)}
+.directions-contact{display:none}
+@media(max-width:760px){
+  #dojazd .media{height:auto;aspect-ratio:1537/918}#dojazd .hero-btn{font-size:.78rem}.directions-details{margin-top:2rem;padding-top:1.5rem}.directions-list{gap:1rem}.directions-list li{padding-left:2rem;font-size:1rem}
+  .directions-hours{margin-top:2.2rem}.directions-hours .contact-card{max-width:none}
+  .directions-contact{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:.65rem}
+  .directions-contact .contact-card{min-width:0;padding:1.15rem;background:var(--accent-soft)}
+  .directions-contact .contact-card-head{gap:.5rem;padding-bottom:.8rem}.directions-contact .contact-number{display:none}
+  .directions-contact .contact-card p{margin-top:.85rem;font-size:.88rem;overflow-wrap:anywhere}.directions-contact .contact-id{display:none}
 }
-/* hero wypełnia sekcję jak w referencji — jedyne kadrowane zdjęcie na stronie */
-.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
-.hero-frame::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(60% 42% at 50% 50%,rgba(30,24,18,.55) 0%,rgba(30,24,18,0) 100%),
-    linear-gradient(180deg,rgba(47,40,32,.5) 0%,rgba(47,40,32,.24) 40%,rgba(47,40,32,.66) 100%);
-}
-.hero-cap{
-  position:absolute;inset:0;z-index:2;display:grid;place-content:center;
-  text-align:center;color:#F7F4EE;padding:1rem;
-}
-.hero-cap h1{
-  font-family:var(--serif);font-weight:300;margin:0;
-  font-size:clamp(2.1rem,6.4vw,5.4rem);line-height:1.02;
-  letter-spacing:.06em;text-transform:uppercase;
-  text-shadow:0 2px 34px rgba(30,24,18,.5);
-}
-.hero-cap .sub{
-  margin-top:1.1rem;font-size:clamp(.62rem,1.3vw,.78rem);
-  letter-spacing:.42em;text-transform:uppercase;color:rgba(247,244,238,.92);
-}
-.hero-addr{
-  padding:1.7rem 0;text-align:center;font-size:.76rem;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--brown);
-}
-.hero-addr .sep{opacity:.5;padding:0 .5rem}
-/* adres prowadzi do map – zwykły odnośnik zewnętrzny, bez śledzenia po naszej stronie */
-.addr-link{border-bottom:1px solid transparent;transition:border-color .4s ease,opacity .4s ease}
-.addr-link:hover{border-bottom-color:currentColor}
-
-/* ---------- PŁÓTNO TREŚCI ---------- */
-.canvas{background:var(--cream)}
-section{padding:clamp(4rem,8vw,7.5rem) 0}
-
-/* blok "filozofii": tekst + zdjęcie */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-.split h2{
-  font-family:var(--serif);font-weight:300;font-size:clamp(1.65rem,3.4vw,2.9rem);
-  line-height:1.24;margin:.9rem 0 1.6rem;letter-spacing:.01em;
-}
-.split .links{display:flex;flex-direction:column;gap:.75rem;font-size:.95rem}
-.split .links a{
-  display:inline-flex;align-items:center;gap:.7rem;width:fit-content;
-  border-bottom:1px solid var(--line);padding-bottom:.35rem;transition:all .4s ease;
-}
-.split .links a:hover{border-color:var(--ink);gap:1.1rem}
-.split .links a .ar{font-family:var(--serif);font-size:1.1rem}
-.frame{aspect-ratio:4/3;background:var(--cream-2);overflow:hidden}
-.frame img{width:100%;height:100%;object-fit:contain}
-@media(max-width:860px){.split{grid-template-columns:1fr}}
-
-/* ---------- GALERIA: poziomy pas ---------- */
-.gal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2.4rem}
-.gal-head h2{
-  font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3.2rem);
-  margin:.6rem 0 0;line-height:1.1;
-}
-.gal-arrows{display:flex;gap:.6rem;flex:0 0 auto}
-.gal-arrows button{
-  width:3rem;height:3rem;border-radius:50%;border:1px solid var(--line);
-  background:transparent;color:var(--ink);font-family:var(--serif);font-size:1.5rem;
-  line-height:1;cursor:pointer;transition:all .4s ease;display:grid;place-items:center;
-}
-.gal-arrows button:hover:not(:disabled){background:var(--brown);color:var(--cream);border-color:var(--brown)}
-.gal-arrows button:disabled{opacity:.25;cursor:default}
-.gal{
-  display:flex;gap:1.2rem;overflow-x:auto;overflow-y:hidden;
-  scroll-snap-type:x proximity;scroll-behavior:smooth;cursor:grab;
-  padding-bottom:1.6rem;scrollbar-width:none;-ms-overflow-style:none;
-  /* --vw = szerokość bez paska przewijania; 100vw powodowałoby poziomy scroll strony */
-  margin-inline:calc(50% - var(--vw)/2);padding-inline:calc(var(--vw)/2 - 50%);
-}
-.gal::-webkit-scrollbar{display:none}
-.gal.drag{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
-.gal figure{
-  margin:0;flex:0 0 auto;scroll-snap-align:start;
-  width:clamp(240px,30vw,400px);aspect-ratio:4/3;   /* zgodne z 4:3 zdjęć → zero kadrowania */
-  background:var(--cream-2);overflow:hidden;position:relative;cursor:zoom-in;
-}
-.gal figure img{width:100%;height:100%;object-fit:contain;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
-.gal figure::after{content:"";position:absolute;inset:0;background:var(--brown);opacity:0;transition:opacity .5s ease}
-.gal figure:hover img{transform:scale(1.03)}
-.gal figure:hover::after{opacity:.07}
-.gal-line{height:1px;background:var(--line);position:relative;overflow:hidden;margin-top:.2rem}
-.gal-line i{position:absolute;left:0;top:0;height:100%;width:24%;background:var(--brown)}
-
-/* ---------- USŁUGI (wycentrowane, jak "The Process") ---------- */
-.mid{text-align:center;max-width:44rem;margin-inline:auto}
-.mid h2{
-  font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,4vw,3.2rem);
-  margin:.7rem 0 0;line-height:1.14;
-}
-.svc{
-  margin-top:clamp(2.5rem,5vw,4rem);
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:0 clamp(2rem,5vw,4rem);
-}
-.svc-row{
-  display:grid;grid-template-columns:2.6rem 1fr;gap:1rem;align-items:baseline;
-  padding:1.15rem .2rem;border-bottom:1px solid var(--line);
-}
-.svc-n{font-size:.66rem;letter-spacing:.2em;color:var(--muted)}
-.svc-t{font-family:var(--serif);font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.3}
-.svc-sub{grid-column:2;font-size:.82rem;color:var(--muted);margin-top:.25rem}
-
-/* ---------- GODZINY ---------- */
-.hours{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);margin-top:clamp(2.5rem,5vw,4rem)}
-.hour-card{border-top:1px solid var(--line);padding-top:1.5rem;text-align:center}
-.hour-card .when{display:block;font-size:.74rem;letter-spacing:.14em;color:var(--muted);margin-bottom:.7rem}
-.hour-card .time{font-family:var(--serif);font-size:clamp(1.7rem,4.4vw,3rem);line-height:1;letter-spacing:.02em}
-@media(max-width:640px){.hours{grid-template-columns:1fr}}
-
-/* ---------- STOPKA ---------- */
-footer{background:var(--brown);color:#EFE9DE;padding:clamp(3.5rem,7vw,6rem) 0 2.5rem}
-.f-name{
-  font-family:var(--serif);font-weight:300;text-align:center;
-  font-size:clamp(1.8rem,5.5vw,4rem);letter-spacing:.1em;text-transform:uppercase;margin:0 0 3rem;
-}
-.f-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;
-  font-size:.92rem;text-align:center;color:rgba(239,233,222,.88);
-}
-.f-grid .lbl{
-  display:block;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;
-  color:rgba(239,233,222,.5);margin-bottom:.8rem;
-}
-.f-grid a{transition:color .3s ease}
-.f-grid a:hover{color:#fff}
-.f-note{
-  margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(239,233,222,.18);
-  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(239,233,222,.45);text-align:center;
-}
-@media(max-width:760px){.f-grid{grid-template-columns:1fr;gap:1.8rem}}
-
-/* ---------- LIGHTBOX ---------- */
-.lb{position:fixed;inset:0;background:rgba(31,26,20,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:4vw}
-.lb.open{display:flex}
-.lb img{max-width:92vw;max-height:88vh;object-fit:contain}
-.lb-close{position:absolute;top:1.5rem;right:2rem;color:#F5F1EA;font-family:var(--serif);font-size:2.4rem;line-height:1;cursor:pointer;opacity:.8}
-.lb-close:hover{opacity:1}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#F5F1EA;font-family:var(--serif);font-size:2.8rem;cursor:pointer;opacity:.5;padding:1rem;user-select:none}
-.lb-nav:hover{opacity:1}
-.lb-prev{left:1vw}.lb-next{right:1vw}
-
-/* ---------- REVEAL (bazowy stan; GSAP przejmuje po wczytaniu) ---------- */
-.rv{opacity:0}
-.rv.in,.no-gsap .rv{opacity:1}
-.no-gsap .rv{transition:opacity .8s ease}
-
-/* split-text: pojedyncze znaki, jak u Hermera (transform+opacity+filter) */
-.sp-w{display:inline-block;white-space:nowrap}
-.sp-c{display:inline-block;opacity:0;will-change:transform,opacity,filter}
-.no-gsap .sp-c{opacity:1}
-
-/* marquee – pas z zakresem usług */
-.strip{
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  padding:1.15rem 0;overflow:hidden;background:var(--cream);
-}
-.strip-track{display:flex;width:max-content;will-change:transform}
-.strip-track span{
-  font-family:var(--serif);font-size:1.2rem;color:var(--ink);opacity:.72;
-  display:flex;align-items:center;gap:3rem;padding-right:3rem;white-space:nowrap;
-}
-.strip-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--taupe-d);display:block}
-
-/* karuzela 3D – odwzorowanie sceny 3D z hermer.pl */
-.gal figure{backface-visibility:hidden}
-
-@media(prefers-reduced-motion:reduce){
-  .rv,.sp-c{opacity:1!important;transform:none!important;filter:none!important}
-  .strip-track{transform:none!important}
-}
+.hero-review{max-width:39rem;margin:1.35rem 0 0;padding-left:1rem;border-left:2px solid var(--gold)}.hero-review-meta{display:flex;align-items:center;gap:.65rem;color:var(--gold);font-size:.78rem;letter-spacing:.12em;line-height:1;text-transform:uppercase}.hero-review-meta span+span{color:rgba(255,255,255,.72);font-size:.62rem}.hero-review blockquote{margin:.55rem 0 0;font-size:.88rem;line-height:1.45}.hero-review figcaption{margin-top:.45rem;color:rgba(255,255,255,.68);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}@media(max-width:760px){.hero-review{margin-top:1rem;padding-left:.8rem}.hero-review blockquote{font-size:.77rem;line-height:1.35}.hero-review figcaption{font-size:.6rem}}#galeria .works-head>p{display:none}
+@media(min-width:1000px){.bar{padding:0;pointer-events:auto}.bar-in{grid-template-columns:auto 1fr auto;align-items:center;min-height:64px;padding:7px 3%;border:0;border-bottom:1px solid rgba(255,255,255,.22);border-radius:0;background:rgba(31,27,23,.88);box-shadow:0 10px 30px rgba(21,17,13,.2);backdrop-filter:blur(18px)}.brand{grid-column:1;grid-row:1;min-height:44px;padding:0 10px;border:0;background:transparent;font-size:.72rem}.menu{position:static;grid-column:2;grid-row:1;justify-self:center}.menu>.pill{display:none}.menu-panel{position:static;display:flex;align-items:center;gap:.2rem;width:auto;padding:0;border:0;border-radius:0;background:transparent;color:#fff;opacity:1;visibility:visible;transform:none}.menu-panel a{padding:13px 13px;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.045em;text-transform:uppercase;white-space:nowrap;transition:background .25s,color .25s}.menu-panel a:hover{background:rgba(255,255,255,.14);color:#fff}.phone{grid-column:3;grid-row:1;min-height:48px;padding:0 21px;border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.1);font-size:.72rem}.phone:hover{background:rgba(255,255,255,.18)}}
+@media(max-width:760px){.bar-in{grid-template-columns:1fr auto;align-items:center}.menu{grid-column:1}.phone{display:inline-flex;grid-column:2;justify-self:end;min-height:38px;padding:0 13px;font-size:.64rem}.phone i{width:8px;height:8px;margin-right:7px}}
+#uslugi .offer-intro{display:block!important}#uslugi .offer-intro>p{display:none}
+@media(min-width:761px){#dojazd .split{align-items:start}#dojazd .media{position:sticky;top:104px;bottom:40px;align-self:start;height:auto;aspect-ratio:1537/918;background:transparent;box-shadow:none}#dojazd .media img{width:100%;height:auto;transform:none!important;object-fit:contain}}
+#kontakt .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem;border:0!important}#kontakt .contact-card{min-height:250px;padding:clamp(1.6rem,3vw,3rem);border:1px solid rgba(70,60,49,.2);border-radius:24px;background:rgba(255,255,255,.22);box-shadow:none;transition:transform .3s ease,background-color .3s ease,border-color .3s ease}#kontakt .contact-card:hover{transform:translateY(-5px);border-color:rgba(70,60,49,.34);background:rgba(255,255,255,.38);box-shadow:none}#kontakt .contact-card-head{padding-bottom:1.15rem}#kontakt .contact-number{font-size:.7rem}#kontakt .contact-card p{max-width:22ch;font-size:clamp(1.15rem,1.7vw,1.55rem);line-height:1.38}#kontakt .contact-id{margin-top:auto;padding-top:1.25rem}@media(max-width:760px){#kontakt .contact-grid{grid-template-columns:1fr;gap:.65rem;border-left:0!important}#kontakt .contact-card{min-height:0;padding:1.35rem;border-radius:20px;background:rgba(255,255,255,.2)}#kontakt .contact-card:hover{background:rgba(255,255,255,.2)}#kontakt .contact-card p{font-size:1.12rem}}
 </style>
-</head>
-<body>
+</head><body>
+<header class="bar"><div class="bar-in"><div class="menu" id="menu"><button class="pill" id="menuButton" aria-expanded="false">Menu</button><nav class="menu-panel"><a href="#start">Strona główna</a><a href="#uslugi">Usługi</a><a href="#dojazd">Dojazd</a><a href="#opinie">Opinie</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a><a class="menu-phone" href="tel:+48697981075"><i></i>697 981 075</a></nav></div><div class="brand">MAREK JAGIELSKI</div><a class="pill phone" href="tel:+48697981075"><i></i>697 981 075</a></div></header>
+<main>
+<section class="hero" id="start"><div class="sticky"><div class="hero-frame" id="heroFrame"><img src="img/22.jpg" alt="Antyczna sofa w czerwono-złote pasy po renowacji w zakładzie tapicerskim"></div><div class="hero-copy" id="heroCopy"><div class="hero-meta"><span>Wałbrzych, ul. Wrocławska 29</span><span>Naprzeciwko salonu BLACK RED WHITE</span></div><h1><span class="mask"><span>Usługi</span></span><span class="mask"><span>tapicerskie</span></span></h1><p class="hero-sub">Marek Jagielski — zakład tapicerski w Wałbrzychu. Renowacja i naprawa mebli tapicerowanych oraz mebli antycznych, tapicerka samochodowa.</p><figure class="hero-review"><div class="hero-review-meta"><span role="img" aria-label="Ocena 5 na 5">★★★★★</span><span>Opinie Google</span></div><blockquote>„Profesjonalne podejście do klienta. Fotel pięknie wykonany. Polecam wszystkim tego fachowca.”</blockquote><figcaption>Sylwester Fortoński</figcaption></figure><div class="hero-cta"><a class="hero-btn" href="tel:+48697981075"><i></i>Zadzwoń: 697 981 075</a><a class="hero-btn hero-btn--map" href="#dojazd"><i></i>Nawiguj w Google Maps</a></div></div></div></section>
+<section class="offer" id="uslugi"><div class="wrap"><div class="offer-intro"><div class="offer-intro-heading"><span class="eyebrow">Usługi</span><h2>Zakres usług</h2></div><p>Oferujemy państwu zakres następujących usług — dziewięć pozycji z oferty zakładu, pogrupowanych w trzy obszary prac.</p></div><div class="offer-accordion"><article class="offer-item is-open" id="meble"><button class="offer-trigger" id="offer-trigger-meble" type="button" aria-expanded="true" aria-controls="offer-panel-meble"><span class="offer-number">01</span><span class="offer-name">Tapicerka mebli</span><span class="offer-toggle" aria-hidden="true"></span></button><div class="offer-panel" id="offer-panel-meble" role="region" aria-labelledby="offer-trigger-meble" aria-hidden="false"><div class="offer-panel-inner"><ul><li><span>Renowacja i naprawa mebli tapicerowanych — wersalki, fotele, sofy, krzesła, itp.</span></li><li><span>Naprawianie konstrukcji foteli</span></li></ul></div></div></article><article class="offer-item" id="antyczne"><button class="offer-trigger" id="offer-trigger-antyczne" type="button" aria-expanded="false" aria-controls="offer-panel-antyczne"><span class="offer-number">02</span><span class="offer-name">Meble antyczne</span><span class="offer-toggle" aria-hidden="true"></span></button><div class="offer-panel" id="offer-panel-antyczne" role="region" aria-labelledby="offer-trigger-antyczne" aria-hidden="true"><div class="offer-panel-inner"><ul><li><span>Renowacja mebli antycznych</span></li></ul></div></div></article><article class="offer-item" id="samochody"><button class="offer-trigger" id="offer-trigger-samochody" type="button" aria-expanded="false" aria-controls="offer-panel-samochody"><span class="offer-number">03</span><span class="offer-name">Tapicerka samochodowa</span><span class="offer-toggle" aria-hidden="true"></span></button><div class="offer-panel" id="offer-panel-samochody" role="region" aria-labelledby="offer-trigger-samochody" aria-hidden="true"><div class="offer-panel-inner"><ul><li><span>Szycie nowych i naprawa starych dachów w cabrioletach</span></li><li><span>Obszywanie deski rozdzielczej w skórę</span></li><li><span>Wykonanie samochodowych sufitów i wykładzin podłogowych</span></li><li><span>Obszywanie kierownic, pokrowców dźwigni zmiany biegów</span></li><li><span>Wnętrza w samochodach po tuningu</span></li><li><span>Tapicerka drzwi</span></li></ul></div></div></article></div></div></section>
+<section class="trust" id="dojazd"><div class="wrap"><div class="trust-head"><h2>Jak dojechać</h2></div><div class="split"><div class="media"><img src="img/dojazd.jpg" alt="Wejście do zakładu tapicerskiego przy ul. Wrocławskiej 29 w Wałbrzychu — czerwone szyldy TAPICER nad witrynami, schodki prowadzące do drzwi" loading="lazy" width="1537" height="918"></div><div class="trust-copy"><p>Zakład mieści się przy ul. Wrocławskiej 29 w Wałbrzychu, naprzeciwko salonu BLACK RED WHITE.</p><div class="hero-cta"><a class="hero-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jagielski%2C%20ul.%20Wroc%C5%82awska%2029%2C%2058-306%20Wa%C5%82brzych" target="_blank" rel="noopener noreferrer"><i></i>Wyznacz trasę w Google Maps</a></div><div class="directions-details"><h3>Instrukcja dojazdu</h3><ol class="directions-list"><li>Jedź ulicą Wrocławską w kierunku centrum Wałbrzycha.</li><li>Wypatruj salonu BLACK RED WHITE — zakład znajduje się dokładnie po jego przeciwnej stronie.</li><li>Wejdź od ulicy po schodkach, między witryną meblową a samochodową, pod czerwonymi szyldami TAPICER.</li></ol></div><div class="directions-hours"><article class="contact-card"><div class="contact-card-head"><span class="contact-label">Godziny otwarcia</span></div><p>poniedziałek – piątek<br>9:00 — 17:00</p><div class="contact-id">soboty<br>9:00 — 13:00</div></article></div><div class="directions-contact"><a class="contact-card" href="tel:+48697981075"><div class="contact-card-head"><span class="contact-label">Telefon</span></div><p>697 981 075</p></a><a class="contact-card" href="mailto:spierzak1@wp.pl"><div class="contact-card-head"><span class="contact-label">E-mail</span></div><p>spierzak1@wp.pl</p></a></div></div></div></div></section>
 
-<nav id="nav">
-  <div class="wrap nav-in">
-    <div class="brand">Marek Jagielski</div>
-    <div class="nav-links">
-      <a href="#uslugi">Usługi</a>
-      <a href="#galeria">Galeria</a>
-    </div>
-    <a class="nav-tel" href="tel:+48697981075">+48 697 981 075</a>
-    <button class="burger" id="burger" aria-label="Usługi" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
 
-<div class="menu" id="menu">
-  <a href="#uslugi">Usługi</a>
-  <a href="#galeria">Galeria</a>
-  <a class="m-contact" href="tel:+48697981075">+48 697 981 075</a>
-  <a class="m-contact" href="tel:748401366">74 840 13 66</a>
-  <a class="m-contact" href="mailto:spierzak1@wp.pl">spierzak1@wp.pl</a>
-</div>
 
-<header>
-  <div class="hero-frame">
-    <img src="img/22.jpg" alt="Renowacja mebli antycznych" width="800" height="600">
-    <div class="hero-cap">
-      <h1 id="heroTitle">Usługi tapicerskie</h1>
-      <div class="sub" id="heroSub">Marek Jagielski</div>
-    </div>
-  </div>
-  <div class="hero-addr rv">
-    <a class="addr-link" href="https://www.google.com/maps/search/?api=1&amp;query=ul.%20Wroc%C5%82awska%2029%2C%2058-306%20Wa%C5%82brzych" target="_blank" rel="noopener noreferrer">ul. Wrocławska 29 <span class="sep">•</span> 58-306 Wałbrzych</a>
-  </div>
-</header>
 
-<div class="strip"><div class="strip-track" id="track"></div></div>
+<section class="reviews" id="opinie"><div class="wrap"><div class="reviews-head"><div><span class="eyebrow">Opinie Google</span><h2>Co mówią Klienci</h2></div><div class="reviews-score"><span class="score-value">4,2</span><div><div class="stars" aria-hidden="true">★★★★★</div><p class="score-meta">Średnia ocen w Google<br>na podstawie 78 opinii</p><a class="reviews-link" href="https://www.google.com/maps/place/Jagielski/@50.801601,16.2921549,17z/data=!4m8!3m7!1s0x470e54655b25fa81:0x20b58d95a4afd368!8m2!3d50.801601!4d16.2921549!9m1!1b1!16s%2Fg%2F1tcy3075?hl=pl" target="_blank" rel="noopener noreferrer">Zobacz opinie w Google<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a></div></div></div><ul class="reviews-track" id="reviewsTrack"><li class="review"><div class="stars" role="img" aria-label="Ocena 5 na 5">★★★★★</div><blockquote>Profesjonalne podejście do klienta. Bardzo uczciwy człowiek, fotel pięknie wykonany. Mimo mojego opóźnienia w odbiorze nie było problemu. Człowiek tak uczciwy, że nie wziął 100 zł za magazynowanie ekstra. Dziękuję jeszcze raz.</blockquote><div class="review-author">Sylwester Fortoński<span>Opinia Google</span></div></li><li class="review"><div class="stars" role="img" aria-label="Ocena 5 na 5">★★★★★</div><blockquote>Usługa wykonana przez Pana Marka zasługuje na szacunek, gdyż praca ta to wielki majstersztyk. Dziękuję, pozdrawiam, polecam wszystkim tego fachowca.</blockquote><div class="review-author">Zygmunt Urbaniak<span>Opinia Google</span></div></li><li class="review"><div class="stars" role="img" aria-label="Ocena 5 na 5">★★★★★</div><blockquote>Rok temu wymieniany miałem boczek skórzany w fotelu kierowcy mojego auta. Usługa wykonana kompleksowo, naprawa profesjonalna, po roku nie widać śladów zużycia. Polecam.</blockquote><div class="review-author">Marcin Popiołek<span>Opinia Google</span></div></li><li class="review"><div class="stars" role="img" aria-label="Ocena 5 na 5">★★★★★</div><blockquote>Jestem bardzo zadowolona z wykonanej usługi. Zleciłam renowację narożnika, otrzymałam w krótkim terminie mebel profesjonalnie odnowiony. Bardzo dziękuję i polecam firmę każdemu, kto szuka dobrej jakości usługi.</blockquote><div class="review-author">BarbaraZ<span>Opinia Google</span></div></li></ul><div class="reviews-nav"><button type="button" class="rev-prev" aria-label="Poprzednie opinie" aria-controls="reviewsTrack"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="rev-next" aria-label="Następne opinie" aria-controls="reviewsTrack"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div></section>
 
-<div class="canvas">
 
-  <section id="uslugi">
-    <div class="wrap">
-      <div class="mid">
-        <span class="eyebrow rv">Oferujemy państwu</span>
-        <h2 class="rv">zakres następujących usług:</h2>
-      </div>
-      <div class="svc" id="svcList"></div>
 
-      <div class="hours">
-        <div class="hour-card rv">
-          <span class="when">Zakład czynny od poniedziałku do piątku w godz.</span>
-          <div class="time">9:00 — 17:00</div>
-        </div>
-        <div class="hour-card rv">
-          <span class="when">w soboty w godz.</span>
-          <div class="time">9:00 — 13:00</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap split">
-      <div>
-        <span class="eyebrow rv">Marek Jagielski</span>
-        <h2 class="rv">Jeśli mają państwo jakiekolwiek pytania bądź wątpliwości prosimy napisać lub zadzwonić.</h2>
-        <div class="links rv">
-          <a href="tel:+48697981075"><span class="ar">&#8594;</span> +48 697 981 075</a>
-          <a href="tel:748401366"><span class="ar">&#8594;</span> 74 840 13 66</a>
-          <a href="mailto:spierzak1@wp.pl"><span class="ar">&#8594;</span> spierzak1@wp.pl</a>
-        </div>
-      </div>
-      <div class="frame rv">
-        <img src="img/31.jpg" alt="Naprawianie konstrukcji foteli" loading="lazy" width="800" height="600">
-      </div>
-    </div>
-  </section>
-
-  <section id="galeria" style="padding-top:0">
-    <div class="wrap">
-      <div class="gal-head">
-        <div>
-          <span class="eyebrow rv">Galeria</span>
-          <h2 class="rv">wybranych prac:</h2>
-        </div>
-        <div class="gal-arrows rv">
-          <button id="galPrev" aria-label="&#8249;">&#8249;</button>
-          <button id="galNext" aria-label="&#8250;">&#8250;</button>
-        </div>
-      </div>
-    </div>
-    <div class="gal" id="gal"></div>
-    <div class="wrap"><div class="gal-line"><i id="galProg"></i></div></div>
-  </section>
-
-</div>
-
-<footer>
-  <div class="wrap">
-    <p class="f-name rv">Usługi tapicerskie</p>
-    <div class="f-grid">
-      <div class="rv">
-        <span class="lbl">Marek Jagielski</span>
-        <a class="addr-link" href="https://www.google.com/maps/search/?api=1&amp;query=ul.%20Wroc%C5%82awska%2029%2C%2058-306%20Wa%C5%82brzych" target="_blank" rel="noopener noreferrer">ul. Wrocławska 29<br>58-306 Wałbrzych</a>
-      </div>
-      <div class="rv">
-        <span class="lbl">Na przeciwko</span>
-        BLACK RED WHITE
-      </div>
-      <div class="rv">
-        <span class="lbl">kom.</span>
-        <a href="tel:748401366">tel:74 840 13 66</a><br>
-        <a href="tel:+48697981075">kom. 697 981 075</a><br>
-        <a href="mailto:spierzak1@wp.pl">spierzak1@wp.pl</a>
-      </div>
-    </div>
-    <div class="f-note">Usługi tapicerskie — Marek Jagielski — Wałbrzych</div>
-  </div>
-</footer>
-
-<div class="lb" id="lb">
-  <span class="lb-close" id="lbClose">&times;</span>
-  <span class="lb-nav lb-prev" id="lbPrev">&#8249;</span>
-  <img id="lbImg" src="" alt="">
-  <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<section class="works" id="galeria"><div class="wrap"><div class="works-head"><div><span class="eyebrow">Galeria</span><h2>Wybrane prace</h2></div><p>Dwadzieścia siedem zdjęć z galerii zakładu — meble po renowacji oraz wnętrza i fotele samochodowe.</p></div><ul class="gal-track" id="galTrack"><li class="gal-item"><img src="img/4.jpg" alt="Jasnozielony fotel z drewnianymi wstawkami po renowacji" loading="lazy"></li><li class="gal-item"><img src="img/5.jpg" alt="Pomarańczowa sofa w skórze po renowacji" loading="lazy"></li><li class="gal-item"><img src="img/6.jpg" alt="Biało-pomarańczowa sofa o falistej linii oparcia" loading="lazy"></li><li class="gal-item"><img src="img/11.jpg" alt="Kanapa i dwa gięte fotele w pasiastej tkaninie" loading="lazy"></li><li class="gal-item"><img src="img/13.jpg" alt="Komplet dwóch foteli z drewnianymi podłokietnikami" loading="lazy"></li><li class="gal-item"><img src="img/16.jpg" alt="Narożnik i fotel w jasnej tkaninie wzorzystej" loading="lazy"></li><li class="gal-item"><img src="img/18.jpg" alt="Kremowa sofa skórzana z wałkami pod podłokietnikami" loading="lazy"></li><li class="gal-item"><img src="img/19.jpg" alt="Niebieska sofa dwuosobowa po nowym obiciu" loading="lazy"></li><li class="gal-item"><img src="img/20.jpg" alt="Pomarańczowa sofa na chromowanych nóżkach" loading="lazy"></li><li class="gal-item"><img src="img/21.jpg" alt="Pomarańczowy fotel o muszelkowym oparciu" loading="lazy"></li><li class="gal-item"><img src="img/22.jpg" alt="Antyczna sofa w czerwono-złote pasy po renowacji" loading="lazy"></li><li class="gal-item"><img src="img/24.jpg" alt="Antyczna sofa obita bordowym adamaszkiem" loading="lazy"></li><li class="gal-item"><img src="img/25.jpg" alt="Trzy gięte krzesła z nowo tapicerowanymi siedziskami" loading="lazy"></li><li class="gal-item"><img src="img/26a.jpg" alt="Siedzisko przed naprawą i po naprawie — zestawienie" loading="lazy"></li><li class="gal-item"><img src="img/28.jpg" alt="Czarne siedzenie motocyklowe obszyte skórą" loading="lazy"></li><li class="gal-item"><img src="img/31.jpg" alt="Sportowy fotel samochodowy w czerni i bieli" loading="lazy"></li><li class="gal-item"><img src="img/32.jpg" alt="Szary fotel samochodowy i obszyta kierownica" loading="lazy"></li><li class="gal-item"><img src="img/33.jpg" alt="Tylna kanapa samochodowa we wzorzystej tkaninie" loading="lazy"></li><li class="gal-item"><img src="img/34.jpg" alt="Para przednich foteli samochodowych w niebieskiej tkaninie" loading="lazy"></li><li class="gal-item"><img src="img/35.jpg" alt="Komplet foteli samochodowych w niebiesko-kremowej skórze" loading="lazy"></li><li class="gal-item"><img src="img/37.jpg" alt="Boczek drzwi samochodowych obszyty niebieską skórą" loading="lazy"></li><li class="gal-item"><img src="img/38.jpg" alt="Boczek drzwi i listwa progowa w niebieskiej skórze" loading="lazy"></li><li class="gal-item"><img src="img/39.jpg" alt="Przednie fotele samochodowe w kremowej skórze" loading="lazy"></li><li class="gal-item"><img src="img/41.jpg" alt="Zagłówek i oparcie fotela w kremowej skórze, zbliżenie przeszyć" loading="lazy"></li><li class="gal-item"><img src="img/51.jpg" alt="Fotele samochodowe w pomarańczowo-kremowej tapicerce" loading="lazy"></li><li class="gal-item"><img src="img/53.jpg" alt="Tylna kanapa samochodowa w kremowej skórze" loading="lazy"></li><li class="gal-item"><img src="img/56.jpg" alt="Boczek drzwi samochodowych w kremowo-czarnej skórze" loading="lazy"></li></ul><div class="gal-nav"><button type="button" class="gal-prev" aria-label="Poprzednie zdjęcia" aria-controls="galTrack"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="gal-next" aria-label="Następne zdjęcia" aria-controls="galTrack"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div></div></section>
+<section class="contact" id="kontakt"><div class="contact-data"><div class="wrap"><div class="contact-head"><div><span class="eyebrow">Kontakt</span><h2>Skontaktuj się z nami</h2></div><p>Jeśli mają państwo jakiekolwiek pytania bądź wątpliwości prosimy napisać lub zadzwonić.</p></div><div class="contact-grid"><article class="contact-card"><div class="contact-card-head"><span class="contact-number">01</span><span class="contact-label">Adres</span></div><p>58-306 Wałbrzych<br>ul. Wrocławska 29</p><div class="contact-id">Naprzeciwko salonu BLACK RED WHITE</div></article><article class="contact-card"><div class="contact-card-head"><span class="contact-number">02</span><span class="contact-label">Telefon</span></div><p><a href="tel:+48697981075">697 981 075</a><br><a href="tel:+48748401366">74 840 13 66</a></p><div class="contact-id">kom. 697 981 075<br>tel. 74 840 13 66</div></article><article class="contact-card"><div class="contact-card-head"><span class="contact-number">03</span><span class="contact-label">E-mail</span></div><p><a href="mailto:spierzak1@wp.pl">spierzak1@wp.pl</a></p><div class="contact-id">Usługi tapicerskie — Marek Jagielski</div></article><article class="contact-card"><div class="contact-card-head"><span class="contact-number">04</span><span class="contact-label">Godziny</span></div><p>poniedziałek – piątek<br>9:00 — 17:00</p><div class="contact-id">soboty<br>9:00 — 13:00</div></article></div></div></div></section>
+</main><footer>Projekt i realizacja: <a href="https://mastalex.pl" target="_blank" rel="noopener noreferrer">mastalex.pl</a></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-/* ===== treść: wyłącznie z oryginalnej strony ===== */
-const uslugi = [
-  ["Renowacja i naprawa mebli tapicerowanych","wersalki, fotele, sofy, krzesła, itp."],
-  ["Renowacja mebli antycznych",""],
-  ["Szycie nowych i naprawa starych dachów w cabrioletach",""],
-  ["Obszywanie deski rozdzielczej w skórę",""],
-  ["Wykonanie samochodowych sufitów i wykładzin podłogowych",""],
-  ["Tapicerujemy wnętrza jachtów i żaglówek",""],
-  ["Naprawianie konstrukcji foteli",""],
-  ["Wyszywanie loga i napisów",""],
-  ["Obszywanie kierownic, pokrowców dźwigni zmiany biegów",""],
-  ["Wnętrza w samochodach po tuningu",""],
-  ["Tapicerka drzwi",""]
-];
-const svc=document.getElementById('svcList');
-uslugi.forEach((u,i)=>{
-  const r=document.createElement('div');
-  r.className='svc-row rv';
-  r.innerHTML='<span class="svc-n">'+String(i+1).padStart(2,'0')+'</span>'+
-              '<span class="svc-t">'+u[0]+'</span>'+
-              (u[1]?'<span class="svc-sub">'+u[1]+'</span>':'');
-  svc.appendChild(r);
+document.querySelectorAll('h1,h2,h3,p,li,blockquote,.traits div,.offer-name,.contact-grid div').forEach(element=>{
+  const walker=document.createTreeWalker(element,NodeFilter.SHOW_TEXT);
+  while(walker.nextNode()) walker.currentNode.nodeValue=walker.currentNode.nodeValue
+    .replace(/(?<!\p{L})([aiouwz])\s+/giu,'$1\u00a0')
+    .replace(/(?<=\p{L})-(?=\p{L})/gu,'\u2011');
 });
-
-const files=["4","5","6","11","13","16","18","19","20","21","22","24","25","26a","28","31","32","33","34","35","37","38","39","41","51","53","56"];
-const galEl=document.getElementById('gal');
-let moved=0;
-files.forEach((f,idx)=>{
-  const fig=document.createElement('figure');
-  fig.className='rv';
-  fig.innerHTML='<img src="img/'+f+'.jpg" alt="Galeria wybranych prac" loading="lazy" width="800" height="600">';
-  fig.addEventListener('click',()=>{ if(moved>4)return; openLb(idx); });
-  galEl.appendChild(fig);
-});
-
-/* ===== poziomy pas: strzałki, pasek, przeciąganie ===== */
-const prog=document.getElementById('galProg'),
-      bPrev=document.getElementById('galPrev'),
-      bNext=document.getElementById('galNext');
-/* przesuwanie po indeksach kafelków – pewniejsze niż scrollBy o wyliczoną szerokość,
-   bo snap nie dociąga wtedy do kolejnego zdjęcia */
-function galIndex(){
-  const figs=[...galEl.querySelectorAll('figure')];
-  const pad=figs.length?figs[0].offsetLeft:0;
-  const x=galEl.scrollLeft;
-  let best=0,bd=Infinity;
-  figs.forEach((f,i)=>{const d=Math.abs((f.offsetLeft-pad)-x);if(d<bd){bd=d;best=i}});
-  return {figs,pad,i:best};
+const menu=document.getElementById('menu'),button=document.getElementById('menuButton');button.addEventListener('click',()=>{const o=menu.classList.toggle('open');button.setAttribute('aria-expanded',o);button.textContent=o?'Zamknij':'Menu'});document.querySelectorAll('.menu-panel a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');button.textContent='Menu';button.setAttribute('aria-expanded','false')}));
+const revTrack=document.getElementById('reviewsTrack');
+if(revTrack){
+  const revPrev=document.querySelector('.rev-prev'),revNext=document.querySelector('.rev-next');
+  const revStep=()=>{const c=revTrack.querySelector('.review');return c?c.getBoundingClientRect().width+(parseFloat(getComputedStyle(revTrack).columnGap)||16):320};
+  const revSync=()=>{const m=revTrack.scrollWidth-revTrack.clientWidth;revPrev.disabled=revTrack.scrollLeft<=2;revNext.disabled=revTrack.scrollLeft>=m-2};
+  revPrev.addEventListener('click',()=>revTrack.scrollBy({left:-revStep(),behavior:'smooth'}));
+  revNext.addEventListener('click',()=>revTrack.scrollBy({left:revStep(),behavior:'smooth'}));
+  revTrack.addEventListener('scroll',revSync,{passive:true});addEventListener('resize',revSync);revSync();
 }
-function galGo(delta){
-  const {figs,pad,i}=galIndex();
-  const t=Math.max(0,Math.min(figs.length-1,i+delta));
-  galEl.scrollTo({left:figs[t].offsetLeft-pad,behavior:'smooth'});
+
+const galTrack=document.getElementById('galTrack');
+if(galTrack){
+  const gPrev=document.querySelector('.gal-prev'),gNext=document.querySelector('.gal-next');
+  const gStep=()=>{const c=galTrack.querySelector('.gal-item');return c?c.getBoundingClientRect().width+(parseFloat(getComputedStyle(galTrack).columnGap)||16):300};
+  const gMax=()=>galTrack.scrollWidth-galTrack.clientWidth;
+  const gSync=()=>{gPrev.disabled=galTrack.scrollLeft<=2;gNext.disabled=galTrack.scrollLeft>=gMax()-2};
+  let auto=null;
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const stopAuto=()=>{if(auto){clearInterval(auto);auto=null}};
+  const startAuto=()=>{if(auto||reduced)return;auto=setInterval(()=>{
+    const max=gMax();
+    if(galTrack.scrollLeft>=max-2){galTrack.scrollTo({left:0,behavior:'smooth'});}
+    else{galTrack.scrollTo({left:Math.min(galTrack.scrollLeft+gStep(),max),behavior:'smooth'});}},3400)};
+  const goTo=(d)=>{const max=gMax();let x=galTrack.scrollLeft+d*gStep();if(x<0)x=0;if(x>max)x=max;galTrack.scrollTo({left:x,behavior:'smooth'})};
+  gPrev.addEventListener('click',()=>{stopAuto();goTo(-1)});
+  gNext.addEventListener('click',()=>{stopAuto();goTo(1)});
+  galTrack.addEventListener('scroll',gSync,{passive:true});addEventListener('resize',gSync);gSync();
+  galTrack.addEventListener('pointerenter',stopAuto);galTrack.addEventListener('pointerdown',stopAuto);
+  if(!reduced&&'IntersectionObserver' in window){
+    new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?startAuto():stopAuto()),{threshold:.25}).observe(galTrack);
+  }
 }
-function galSync(){
-  const max=galEl.scrollWidth-galEl.clientWidth;
-  const r=max>0?galEl.scrollLeft/max:0;
-  prog.style.transform='translateX('+(r*(100/0.24-100))+'%)';
-  bPrev.disabled=galEl.scrollLeft<4;
-  bNext.disabled=galEl.scrollLeft>=max-4;
-}
-/* strzałki przesuwają pas dokładnie o jeden kafelek */
-bPrev.onclick=()=>galGo(-1);
-bNext.onclick=()=>galGo(1);
-galEl.addEventListener('scroll',galSync,{passive:true});
-addEventListener('resize',galSync);
-addEventListener('load',galSync);
-galSync();
-
-let down=false,sx=0,sl=0;
-galEl.addEventListener('mousedown',e=>{down=true;moved=0;sx=e.pageX;sl=galEl.scrollLeft});
-addEventListener('mouseup',()=>{down=false;galEl.classList.remove('drag')});
-galEl.addEventListener('mouseleave',()=>{down=false;galEl.classList.remove('drag')});
-galEl.addEventListener('mousemove',e=>{
-  if(!down)return;
-  const d=e.pageX-sx; moved=Math.abs(d);
-  if(moved>4)galEl.classList.add('drag');
-  galEl.scrollLeft=sl-d;
-});
-
-/* ===== lightbox ===== */
-const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
-let cur=0;
-function openLb(i){cur=i;lbImg.src='img/'+files[cur]+'.jpg';lb.classList.add('open');document.body.style.overflow='hidden'}
-function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
-function stepLb(d){cur=(cur+d+files.length)%files.length;lbImg.src='img/'+files[cur]+'.jpg'}
-document.getElementById('lbClose').onclick=closeLb;
-document.getElementById('lbNext').onclick=e=>{e.stopPropagation();stepLb(1)};
-document.getElementById('lbPrev').onclick=e=>{e.stopPropagation();stepLb(-1)};
-lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
-addEventListener('keydown',e=>{
-  if(!lb.classList.contains('open'))return;
-  if(e.key==='Escape')closeLb();
-  if(e.key==='ArrowRight')stepLb(1);
-  if(e.key==='ArrowLeft')stepLb(-1);
-});
-
-/* ===== nawigacja ===== */
-const nav=document.getElementById('nav');
-const onScroll=y=>nav.classList.toggle('solid',y>60);
-
-/* menu mobilne */
-const burger=document.getElementById('burger'), menu=document.getElementById('menu');
-const setMenu=open=>{
-  burger.classList.toggle('open',open);
-  menu.classList.toggle('open',open);
-  burger.setAttribute('aria-expanded',open?'true':'false');
-  document.body.style.overflow=open?'hidden':'';
-};
-burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
-menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open'))setMenu(false)});
-addEventListener('resize',()=>{if(innerWidth>900&&menu.classList.contains('open'))setMenu(false)});
-
-/* ===== marquee: zakres usług (pas jak u Hermera) ===== */
-const stripItems=["Renowacja mebli antycznych","Tapicerka drzwi","Naprawianie konstrukcji foteli",
-  "Wyszywanie loga i napisów","Renowacja i naprawa mebli tapicerowanych","Tapicerujemy wnętrza jachtów i żaglówek"];
-const track=document.getElementById('track');
-track.innerHTML=[...stripItems,...stripItems].map(t=>'<span>'+t+'</span>').join('');
-
-/* ===== split-text: rozbicie nagłówka na znaki =====
-   Odwzorowanie sygnaturowej animacji Hermera: każdy znak w osobnym <span>,
-   animowany przez transform + opacity + filter(blur). Treść pozostaje bez zmian. */
-function splitChars(el){
-  if(el.dataset.split)return [...el.querySelectorAll('.sp-c')];
-  const words=(el.textContent||'').split(/(\s+)/);
-  el.textContent='';
-  const chars=[];
-  words.forEach(w=>{
-    if(/^\s+$/.test(w)){ el.appendChild(document.createTextNode(' ')); return; }
-    const wrap=document.createElement('span'); wrap.className='sp-w';
-    [...w].forEach(ch=>{
-      const s=document.createElement('span'); s.className='sp-c'; s.textContent=ch;
-      wrap.appendChild(s); chars.push(s);
+const offerItems=[...document.querySelectorAll('.offer-item')];
+offerItems.forEach(item=>{
+  const trigger=item.querySelector('.offer-trigger');
+  const panel=item.querySelector('.offer-panel');
+  trigger.addEventListener('click',()=>{
+    const triggerTop=trigger.getBoundingClientRect().top;
+    const shouldOpen=!item.classList.contains('is-open');
+    offerItems.forEach(other=>{
+      const otherTrigger=other.querySelector('.offer-trigger');
+      const otherPanel=other.querySelector('.offer-panel');
+      other.classList.remove('is-open');
+      otherTrigger.setAttribute('aria-expanded','false');
+      otherPanel.setAttribute('aria-hidden','true');
     });
-    el.appendChild(wrap);
+    if(shouldOpen){
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded','true');
+      panel.setAttribute('aria-hidden','false');
+    }
+    const anchorStart=performance.now();
+    const keepTriggerInPlace=()=>{
+      const positionShift=trigger.getBoundingClientRect().top-triggerTop;
+      if(Math.abs(positionShift)>.5){
+        const previousBehavior=document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior='auto';
+        window.scrollTo(0,window.scrollY+positionShift);
+        document.documentElement.style.scrollBehavior=previousBehavior;
+      }
+      if(performance.now()-anchorStart<560) requestAnimationFrame(keepTriggerInPlace);
+    };
+    keepTriggerInPlace();
   });
-  el.dataset.split='1';
-  return chars;
-}
-
-/* ===== animacje: GSAP ScrollTrigger (bez smooth scrolla) ===== */
-const hasGSAP = window.gsap && window.ScrollTrigger;
-if(!hasGSAP) document.documentElement.classList.add('no-gsap');
-addEventListener('scroll',()=>onScroll(scrollY),{passive:true});
-
-if(hasGSAP){
+});
+if(window.gsap&&window.ScrollTrigger){
   gsap.registerPlugin(ScrollTrigger);
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const mobile=matchMedia('(max-width:760px)').matches;
 
-  /* 1. HERO — split-text z rozmyciem, dokładnie wzorzec Hermera */
-  const heroChars=splitChars(document.getElementById('heroTitle'));
-  const subChars=splitChars(document.getElementById('heroSub'));
-  const tl=gsap.timeline({defaults:{ease:'power3.out'}});
-  tl.from('.hero-frame img',{scale:1.12,duration:2.0,ease:'power2.out',force3D:true})
-    .fromTo(heroChars,
-      {opacity:0,y:'0.6em',filter:'blur(12px)'},
-      {opacity:1,y:'0em',filter:'blur(0px)',duration:1.1,stagger:0.028,force3D:true},'-=1.55')
-    .fromTo(subChars,
-      {opacity:0,y:14,filter:'blur(8px)'},
-      {opacity:1,y:0,filter:'blur(0px)',duration:.9,stagger:0.02,force3D:true},'-=0.7');
-
-  /* 2. parallax hero przy przewijaniu (scrub) */
-  gsap.to('.hero-frame img',{
-    yPercent:12,ease:'none',force3D:true,
-    scrollTrigger:{trigger:'.hero-frame',start:'top top',end:'bottom top',scrub:true}
-  });
-
-  /* 3. nagłówki sekcji — ten sam split z blur */
-  gsap.utils.toArray('.split h2, .gal-head h2, .mid h2, .f-name').forEach(h=>{
-    const chars=splitChars(h);
-    gsap.fromTo(chars,
-      {opacity:0,y:'0.5em',filter:'blur(10px)'},
-      {opacity:1,y:'0em',filter:'blur(0px)',duration:1,ease:'power3.out',stagger:0.018,force3D:true,
-       scrollTrigger:{trigger:h,start:'top 85%',once:true}});
-  });
-
-  /* 4. pozostałe bloki — opacity/y/scale ze staggerem */
-  gsap.utils.toArray('.rv').forEach(el=>{
-    gsap.fromTo(el,{opacity:0,y:42,scale:.97},
-      {opacity:1,y:0,scale:1,duration:1.05,ease:'power3.out',force3D:true,
-       scrollTrigger:{trigger:el,start:'top 85%',once:true}});
-  });
-
-  /* 5. galeria — wejście kafelków z obrotem 3D (scena perspective jak u Hermera) */
-  gsap.fromTo('.gal figure',
-    {opacity:0,y:60,rotateX:-28,transformOrigin:'50% 100%'},
-    {opacity:1,y:0,rotateX:0,duration:1.15,ease:'power3.out',force3D:true,stagger:.06,
-     scrollTrigger:{trigger:'.gal',start:'top 88%',once:true}});
-
-  /* 6. marquee – nieskończony pas sterowany tickerem + reakcja na kierunek scrolla */
-  const half=()=>track.scrollWidth/2;
-  let mx=0, dir=1, base=.4;
-  gsap.ticker.add(()=>{ mx-=base*dir; if(-mx>=half())mx=0; if(mx>0)mx=-half(); gsap.set(track,{x:mx}); });
-  ScrollTrigger.create({onUpdate:s=>{dir=s.direction===-1?-1:1}});
-
-  /* 7. liczniki godzin – odpowiednik animacji val/onUpdate u Hermera */
-  gsap.utils.toArray('.hour-card .time').forEach(el=>{
-    const txt=el.textContent, m=txt.match(/(\d+):00 — (\d+):00/);
-    if(!m)return;
-    const a=+m[1], b=+m[2], o={v1:0,v2:0};
-    gsap.to(o,{v1:a,v2:b,duration:1.4,ease:'power2.out',
-      onUpdate:()=>{el.textContent=Math.round(o.v1)+':00 — '+Math.round(o.v2)+':00'},
-      onComplete:()=>{el.textContent=txt},
-      scrollTrigger:{trigger:el,start:'top 85%',once:true}});
-  });
-
-  addEventListener('load',()=>ScrollTrigger.refresh());
+  if(!reduced&&!mobile){
+  }else{
+    gsap.utils.toArray('.reveal').forEach(el=>gsap.fromTo(el,{opacity:0,y:32},{opacity:1,y:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}}));
+  }
 }
+</script></body></html>
 
-/* szerokość bez paska przewijania – dla pełnej szerokości pasa galerii */
-const setVW=()=>document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px');
-setVW(); addEventListener('resize',setVW);
-</script>
-</body>
-</html>
+
+
+
