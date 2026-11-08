@@ -33,3 +33,22 @@ document.addEventListener('focusin', event => {
 });
 
 desktopNavigation.addEventListener('change', () => setMenuOpen(false));
+
+const disclosureQuery = matchMedia('(max-width: 760px)');
+const responsiveDetails = [...document.querySelectorAll('details[data-responsive-disclosure]')];
+const applyResponsiveDetails = () => {
+  responsiveDetails.forEach(detail => { detail.open = !disclosureQuery.matches; });
+};
+applyResponsiveDetails();
+disclosureQuery.addEventListener('change', applyResponsiveDetails);
+
+const revealAnchoredDisclosure = () => {
+  const id = location.hash.slice(1);
+  if (!id) return;
+  let target = null;
+  try { target = document.getElementById(decodeURIComponent(id)); } catch (_) {}
+  const disclosure = target && (target.closest('details[data-responsive-disclosure]') || target.querySelector('details[data-responsive-disclosure]'));
+  if (disclosure) disclosure.open = true;
+};
+window.addEventListener('hashchange', revealAnchoredDisclosure);
+revealAnchoredDisclosure();
