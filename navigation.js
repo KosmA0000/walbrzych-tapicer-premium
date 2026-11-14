@@ -68,6 +68,51 @@ const revealAnchoredDisclosure = () => {
 };
 window.addEventListener('hashchange', revealAnchoredDisclosure);
 revealAnchoredDisclosure();
+
+const galleryTrack = document.getElementById('galTrack');
+if (galleryTrack) {
+  const filters = document.querySelector('.gallery-filters');
+  const filterButtons = [...filters.querySelectorAll('[data-gallery-filter]')];
+  const items = [...galleryTrack.querySelectorAll('.gal-item')];
+  const previous = document.querySelector('.gal-prev');
+  const next = document.querySelector('.gal-next');
+  const status = document.querySelector('.gallery-status');
+
+  const updateGalleryControls = () => {
+    previous.disabled = galleryTrack.scrollLeft <= 2;
+    next.disabled = galleryTrack.scrollLeft >= galleryTrack.scrollWidth - galleryTrack.clientWidth - 2;
+  };
+
+  const selectCategory = button => {
+    const category = button.dataset.galleryFilter;
+    items.forEach(item => {
+      item.hidden = category !== 'all' && item.dataset.category !== category;
+    });
+    filterButtons.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+    galleryTrack.scrollTo({ left: 0, behavior: 'instant' });
+    status.textContent = `${button.textContent}. Liczba zdjęć ${items.filter(item => !item.hidden).length}.`;
+    updateGalleryControls();
+  };
+
+  const scrollGallery = direction => {
+    const item = items.find(item => !item.hidden);
+    const gap = parseFloat(getComputedStyle(galleryTrack).columnGap) || 0;
+    const step = item.getBoundingClientRect().width + gap;
+    galleryTrack.scrollBy({
+      left: direction * step,
+      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+    });
+  };
+
+  filterButtons.forEach(button => button.addEventListener('click', () => selectCategory(button)));
+  previous.addEventListener('click', () => scrollGallery(-1));
+  next.addEventListener('click', () => scrollGallery(1));
+  galleryTrack.addEventListener('scroll', updateGalleryControls, { passive: true });
+  window.addEventListener('resize', updateGalleryControls);
+  filters.hidden = false;
+  selectCategory(filterButtons[0]);
+}
+
 const lightboxImages = [...document.querySelectorAll('.gal-item img, .car-gallery img')];
 if (lightboxImages.length) {
   const lightbox = document.createElement('dialog');
@@ -78,6 +123,8 @@ if (lightboxImages.length) {
   const lightboxImg = lightbox.querySelector('.lightbox-img');
   const lightboxCount = lightbox.querySelector('.lightbox-count');
   let current = 0;
+  let activeImages = lightboxImages;
+  let lightboxOpener = null;
   let swipeStart = null;
 
   const largestSource = img => {
@@ -87,33 +134,34 @@ if (lightboxImages.length) {
   };
 
   const showImage = index => {
-    current = (index + lightboxImages.length) % lightboxImages.length;
-    const img = lightboxImages[current];
+    current = (index + activeImages.length) % activeImages.length;
+    const img = activeImages[current];
     lightboxImg.src = largestSource(img);
     lightboxImg.alt = img.alt;
-    lightboxCount.textContent = `${current + 1} / ${lightboxImages.length}`;
+    lightboxCount.textContent = `${current + 1} / ${activeImages.length}`;
   };
 
-  const openLightbox = index => {
-    showImage(index);
+  const openLightbox = img => {
+    lightboxOpener = img.closest('button');
+    activeImages = lightboxImages.filter(image => !image.closest('[hidden]'));
+    showImage(activeImages.indexOf(img));
     lightbox.showModal();
     document.documentElement.classList.add('lightbox-open');
   };
 
-  lightboxImages.forEach((img, index) => {
-    img.tabIndex = 0;
-    img.addEventListener('click', () => openLightbox(index));
-    img.addEventListener('keydown', event => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        openLightbox(index);
-      }
-    });
+  lightboxImages.forEach(img => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'gallery-image-button';
+    button.setAttribute('aria-label', `Powiększ zdjęcie. ${img.alt}`);
+    img.before(button);
+    button.append(img);
+    button.addEventListener('click', () => openLightbox(img));
   });
 
   lightbox.addEventListener('close', () => {
     document.documentElement.classList.remove('lightbox-open');
-    lightboxImages[current].focus({ preventScroll: true });
+    lightboxOpener.focus({ preventScroll: true });
   });
   lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
   lightbox.querySelector('.lightbox-prev').addEventListener('click', () => showImage(current - 1));
